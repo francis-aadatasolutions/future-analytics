@@ -1,10 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
 import cogress from '../../assets/images/companies/cogress.jpeg';
-import dunkin from '../../assets/images/companies/dunkin.jpg';
 import hexcel2 from '../../assets/images/companies/hexcel2.png';
 import intertek from '../../assets/images/companies/Intertek_Logo.jpg';
-import interxion from '../../assets/images/companies/Interxion_Logo.jpg';
+
 import sycamore_square from '../../assets/images/companies/sycamore_square.jpeg';
 import aqovia from '../../assets/images/companies/aqovia.png';
 import intale from '../../assets/images/companies/intale.png';
