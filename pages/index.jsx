@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <main>
         <div className='relative'>
-          <div className=' bg h-screen'>
+          <div className='bg-hero-pattern bg-cover bg-no-repeat w-full h-screen'>
             <Headers />
             <div className='section-center'>
               <CTASection />

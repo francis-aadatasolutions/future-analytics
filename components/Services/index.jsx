@@ -45,7 +45,7 @@ const Services = () => {
           All the service that we provide
         </h2>
 
-        <div className='hidden services-bg md:block'>
+        <div className='hidden bg-hero-pattern2  bg-cover bg-no-repeat w-full md:block'>
           <div className='w-full max-w-[1304px] mx-auto '>
             <div className='content-wrap items-center'>
               <motion.div
@@ -53,7 +53,12 @@ const Services = () => {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{ once: true }}>
-                <Image src={embeded} alt='Data Apps' className='rounded-lg ' />
+                <Image
+                  priority
+                  src={embeded}
+                  alt='Data Apps'
+                  className='rounded-lg '
+                />
               </motion.div>
               <motion.div
                 variants={contentVariants}
@@ -105,6 +110,7 @@ const Services = () => {
                 whileInView='visible'
                 viewport={{ once: true }}>
                 <Image
+                  priority
                   src={rampidinternalapp}
                   alt='Rapid Internal App Development'
                   className='rounded-lg '
@@ -121,6 +127,7 @@ const Services = () => {
                 whileInView='visible'
                 viewport={{ once: true }}>
                 <Image
+                  priority
                   src={powerBi}
                   alt='PowerBi Team'
                   className='rounded-lg '
@@ -178,6 +185,7 @@ const Services = () => {
                 whileInView='visible'
                 viewport={{ once: true }}>
                 <Image
+                  priority
                   src={buisinessinteligence}
                   alt='Data Apps'
                   className='rounded-lg '
@@ -193,6 +201,7 @@ const Services = () => {
                 whileInView='visible'
                 viewport={{ once: true }}>
                 <Image
+                  priority
                   src={powerBiconsultant}
                   alt='Power BI & Azure Analysis Services Consultation'
                   className='rounded-lg '
@@ -235,7 +244,12 @@ const Services = () => {
                   y: 0,
                 }}
                 viewport={{ once: true, amount: 1 }}>
-                <Image src={embeded} alt='Data Apps' className='rounded-lg ' />
+                <Image
+                  priority
+                  src={embeded}
+                  alt='Data Apps'
+                  className='rounded-lg '
+                />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: 200 }}
@@ -276,6 +290,7 @@ const Services = () => {
                 }}
                 viewport={{ once: true, amount: 1 }}>
                 <Image
+                  priority
                   src={rampidinternalapp}
                   alt='Rapid Internal App Development'
                   className='rounded-lg '
@@ -314,6 +329,7 @@ const Services = () => {
                 }}
                 viewport={{ once: true, amount: 1 }}>
                 <Image
+                  priority
                   src={powerBi}
                   alt='PowerBi Team'
                   className='rounded-lg '
@@ -349,6 +365,7 @@ const Services = () => {
                 }}
                 viewport={{ once: true, amount: 1 }}>
                 <Image
+                  priority
                   src={buisinessinteligence}
                   alt='Data Apps'
                   className='rounded-lg '
@@ -383,6 +400,7 @@ const Services = () => {
                 viewport={{ once: true, amount: 1 }}>
                 {' '}
                 <Image
+                  priority
                   src={powerBiconsultant}
                   alt='Power BI & Azure Analysis Services Consultation'
                   className='rounded-lg '

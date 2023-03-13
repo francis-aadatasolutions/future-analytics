@@ -121,19 +121,6 @@ html {
   width: 250px;
 }
 
-.bg {
-  /* background: linear-gradient(70.91deg, #000428 0%, #0c77d5 100%); */
-  /* background: linear-gradient(70.91deg, #050f64 0%, #0c77d5 100%); */
-  background-image: url('../assets/bg5.svg') !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.services-bg {
-  background-image: url('../assets/circlebg.svg') !important;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .contact-shadow {
   box-shadow: 6px 6px 12px rgba(216, 224, 233, 0.6), -6px -6px 12px #ffffff,
     inset -6px -6px 8px rgba(255, 255, 255, 0.25),

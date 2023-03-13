@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'hero-pattern': "url('/bg5.svg')",
+        'hero-pattern2': "url('/circlebg.svg')",
+      },
       dropShadow: {
         '4xl': ['0px 4px 5px rgba(0, 0, 0, 0.10)'],
 
