@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { InlineWidget, PopupButton } from 'react-calendly';
 import { MdEmail } from 'react-icons/md';
-import { BsFillCalendarWeekFill } from 'react-icons/bs';
+import { BsEnvelopeCheckFill, BsFillCalendarWeekFill } from 'react-icons/bs';
 import { useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
@@ -9,16 +9,30 @@ import axios from 'axios';
 const Contact = () => {
   const [switchContact, setSwitchContact] = useState(true);
   const [isVerified, setIsVerified] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
 
   function onChange(value) {
     setIsVerified(true);
   }
+
+  const onSubmit = async (data) => {
+    try {
+      const result = await axios.post('/api/sendgrid', data);
+      if (result.status === 200) {
+        setIsSubmitted(true);
+        reset({ name: '', email: '', message: '' });
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   return (
     <div id='contact' className='section-center'>
@@ -42,14 +56,19 @@ const Contact = () => {
 
       {switchContact ? (
         <div className='bg-white p-8 rounded-xl contact-shadow md:w-fit md:mx-auto'>
+          {isSubmitted && (
+            <div className='mb-4 max-w-sm mx-auto p-3 bg-slate-100 rounded-lg'>
+              <div className='flex flex-col items-center'>
+                <BsEnvelopeCheckFill className='text-green-400 text-2xl' />
+                <p className='text-lg text-center'>
+                  Thank you for contacting us! we will be in touch with you as
+                  soon as possible.
+                </p>
+              </div>
+            </div>
+          )}
           <form
-            onSubmit={handleSubmit(async (data) => {
-              try {
-                const result = await axios.post('/api/sendgrid', data);
-              } catch (error) {
-                console.log(error);
-              }
-            })}
+            onSubmit={handleSubmit(onSubmit)}
             className='flex flex-col gap-3 w-full md:w-[30rem]'>
             <label htmlFor='name' className='capitalize'>
               Enter your name
@@ -99,10 +118,9 @@ const Contact = () => {
             />
             <div className='mx-auto'>
               <input
-                disabled={!isVerified}
+                // disabled={!isVerified}
                 type='submit'
                 value='Send a message'
-                // onClick={handleSubmit}
                 className='p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
               />
             </div>
