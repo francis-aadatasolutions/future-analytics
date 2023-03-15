@@ -2,13 +2,23 @@ import React, { useState } from 'react';
 import { InlineWidget, PopupButton } from 'react-calendly';
 import { MdEmail } from 'react-icons/md';
 import { BsFillCalendarWeekFill } from 'react-icons/bs';
+import { useForm } from 'react-hook-form';
+import ReCAPTCHA from 'react-google-recaptcha';
+import axios from 'axios';
 
 const Contact = () => {
-  const [fullname, setFullname] = useState('');
-  const [email, setEmail] = useState('');
-
-  const [message, setMessage] = useState('');
   const [switchContact, setSwitchContact] = useState(true);
+  const [isVerified, setIsVerified] = useState(false);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  function onChange(value) {
+    setIsVerified(true);
+  }
 
   return (
     <div id='contact' className='section-center'>
@@ -29,49 +39,72 @@ const Contact = () => {
           Book a Calendly
         </button>
       </div>
+
       {switchContact ? (
         <div className='bg-white p-8 rounded-xl contact-shadow md:w-fit md:mx-auto'>
-          <form className='flex flex-col gap-3 w-full md:w-[30rem]'>
+          <form
+            onSubmit={handleSubmit(async (data) => {
+              try {
+                const result = await axios.post('/api/sendgrid', data);
+              } catch (error) {
+                console.log(error);
+              }
+            })}
+            className='flex flex-col gap-3 w-full md:w-[30rem]'>
             <label htmlFor='name' className='capitalize'>
               Enter your name
             </label>
             <input
-              type='text'
-              name='name'
-              id='name'
-              value={fullname}
-              onChange={(e) => setFullname(e.target.value)}
-              required
-              className='bginside outline-none border border-blue-300 rounded-2xl pl-2 h-12'
+              {...register('name', { required: true })}
+              className={
+                errors.name
+                  ? 'bginside outline-none border border-red-300 rounded-2xl pl-2 h-12'
+                  : 'bginside outline-none border border-blue-300 rounded-2xl pl-2 h-12'
+              }
             />
+            {errors.name && <p className='text-red-400'>Name is required.</p>}
             <label htmlFor='mail' className='capitalize'>
               Enter your email
             </label>
             <input
-              type='email'
-              name='mail'
-              id='mail'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
+              {...register('email', {
+                required: true,
+                pattern: {
+                  value:
+                    /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                  message: 'Invalid email address',
+                },
+              })}
               className='bginside outline-none border border-blue-300 rounded-2xl pl-2 h-12'
             />
+            <p className='text-red-400'>{errors.email?.message}</p>
             <label htmlFor='message' className='capitalize'>
               enter your message
             </label>
             <textarea
-              name='message'
-              id='message'
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              className='bginside outline-none border border-blue-300 rounded-2xl pl-2 h-24'
+              {...register('message', { required: true })}
+              className={
+                errors.message
+                  ? 'bginside outline-none border border-red-300 rounded-2xl pl-2 h-24'
+                  : 'bginside outline-none border border-blue-300 rounded-2xl pl-2 h-24'
+              }
+            />
+            {errors.message && (
+              <p className='text-red-400'>Message is required.</p>
+            )}
+            <ReCAPTCHA
+              className='mx-auto mt-4'
+              sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
+              onChange={onChange}
             />
             <div className='mx-auto'>
-              <button
+              <input
+                // disabled={!isVerified}
+                type='submit'
+                value='Send a message'
                 // onClick={handleSubmit}
-                className='p-4 my-4 w-32  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer'>
-                Send Message
-              </button>
+                className='p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
+              />
             </div>
           </form>
         </div>

@@ -13,6 +13,7 @@ module.exports = {
       backgroundImage: {
         'hero-pattern': "url('/bg5.svg')",
         'hero-pattern2': "url('/circlebg.svg')",
+        'aboutus-pattern': "url('/aboutus.svg')",
       },
       dropShadow: {
         '4xl': ['0px 4px 5px rgba(0, 0, 0, 0.10)'],

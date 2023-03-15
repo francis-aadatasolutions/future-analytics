@@ -6,6 +6,7 @@ import powerBi from '../../assets/images/services/powerBi.png';
 import powerBiconsultant from '../../assets/images/services/powerBiconsultant.png';
 import buisinessinteligence from '../../assets/images/services/buisinessinteligence.png';
 import { motion } from 'framer-motion';
+import PowerBi from '@/assets/SVG/Services/PowerBi';
 
 const Services = () => {
   const variants = {
@@ -126,12 +127,14 @@ const Services = () => {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{ once: true }}>
-                <Image
+                {/* <Image
                   priority
                   src={powerBi}
                   alt='PowerBi Team'
                   className='rounded-lg '
-                />
+                /> */}
+
+                <PowerBi />
               </motion.div>
               <motion.div
                 variants={contentVariants}
@@ -228,6 +231,8 @@ const Services = () => {
             </div>
           </div>
         </div>
+
+        {/* mobile */}
 
         <div className='services-bg md:hidden'>
           <div className='w-full max-w-[1304px] mx-auto '>

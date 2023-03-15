@@ -1,6 +1,3 @@
-import SVGCTA from '@/assets/SVG/CTASVG';
-import { CTASVGWEB } from '@/assets/SVG/CTASVGWEB';
-import CTANEW from '@/assets/SVG/NewCTA';
 import cta from '../../assets/cta.png';
 import { motion } from 'framer-motion';
 

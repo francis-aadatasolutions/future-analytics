@@ -1,4 +1,10 @@
 import React from 'react';
+import powerBi from '../assets/images/technologies/Power-BI.png';
+import cubedev from '../assets/images/technologies/cubedev.png';
+import azure from '../assets/images/technologies/azure.png';
+import react from '../assets/images/technologies/react.png';
+import vega from '../assets/images/technologies/vega.png';
+import Image from 'next/image';
 
 const Slider = () => {
   return (
@@ -8,116 +14,34 @@ const Slider = () => {
         <div className='slider'>
           <div className='slide-track'>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={powerBi} className='w-16 h-16' alt='PowerBI' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={azure} className='w-[5rem] h-14' alt='Azure' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={cubedev} className='w-32  h-16' alt='Cubedev' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={react} className='w-16 h-16' alt='ReactJS' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={vega} className='w-16 h-16' alt='Vega' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={powerBi} className='w-16 h-16' alt='PowerBI' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={azure} className='w-[5rem] h-14' alt='Azure' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/1.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={cubedev} className='w-32  h-16' alt='Cubedev' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/2.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={react} className='w-16 h-16' alt='ReactJS' />
             </div>
             <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/3.png'
-                height='100'
-                width='250'
-                alt=''
-              />
-            </div>
-            <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/4.png'
-                height='100'
-                width='250'
-                alt=''
-              />
-            </div>
-            <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/5.png'
-                height='100'
-                width='250'
-                alt=''
-              />
-            </div>
-            <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/6.png'
-                height='100'
-                width='250'
-                alt=''
-              />
-            </div>
-            <div className='slide'>
-              <img
-                src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/557257/7.png'
-                height='100'
-                width='250'
-                alt=''
-              />
+              <Image src={vega} className='w-16 h-16' alt='Vega' />
             </div>
           </div>
         </div>
