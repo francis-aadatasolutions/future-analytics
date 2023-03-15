@@ -118,7 +118,7 @@ const Contact = () => {
             />
             <div className='mx-auto'>
               <input
-                // disabled={!isVerified}
+                disabled={!isVerified}
                 type='submit'
                 value='Send a message'
                 className='p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
