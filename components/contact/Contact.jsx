@@ -99,7 +99,7 @@ const Contact = () => {
             />
             <div className='mx-auto'>
               <input
-                // disabled={!isVerified}
+                disabled={!isVerified}
                 type='submit'
                 value='Send a message'
                 // onClick={handleSubmit}
