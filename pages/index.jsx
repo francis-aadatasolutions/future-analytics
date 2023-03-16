@@ -1,16 +1,20 @@
 import { NavbarLinks } from '@/assets/NavbarLinks';
+import { LogolongWeb } from '@/assets/SVG/LogoBlack';
 import Aboutus from '@/components/About/Aboutus';
 import PastClients from '@/components/Clients/PastClient';
 import Contact from '@/components/contact/Contact';
 import { CTASection } from '@/components/CTA/CTASection';
 import Footer from '@/components/Footer/Footer';
 import Headers from '@/components/header';
+import MaintenanceLogo from '@/components/MaintenanceLogo';
 import Services from '@/components/Services';
 import Slider from '@/components/Slider';
 import { AnimatePresence, motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
+
 import { useState } from 'react';
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,43 +38,56 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>
-        <div className=''>
-          <div className='relative bg-hero-pattern bg-cover bg-no-repeat w-full h-screen'>
-            <Headers setIsOpen={setIsOpen} isOpen={isOpen} />
-            <AnimatePresence>
-              {isOpen && (
+      <main className='section-center relative'>
+        <AnimatePresence>
+          {isOpen && (
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className='modal-backdrop'
+                onClick={() => setIsOpen(false)}
+              />
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className='content scrollbar-hide'>
                 <motion.div
-                  className='absolute mx-auto pt-8 w-full md:hidden  flex flex-col gap-8 items-center font-semibold responsive-mobile-gradient z-50'
-                  variants={item}
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: '100vh', opacity: 1 }}
-                  transition={{ duration: 0.5 }}
-                  exit='exit'>
-                  {NavbarLinks.map((links) => {
-                    const { id, name, link, icon, textSize } = links;
-                    return (
-                      <Link href={link} key={id} className=''>
-                        <p className='text-xl text-white'>{name}</p>
-                      </Link>
-                    );
-                  })}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}>
+                  <div className='flex justify-end text-4xl mb-8 cursor-pointer'>
+                    <AiFillCloseCircle onClick={() => setIsOpen(false)} />
+                  </div>
+                  <Contact />
                 </motion.div>
-              )}
-            </AnimatePresence>
-            <div className='section-center'>
-              <CTASection />
+              </motion.div>
+            </>
+          )}
+        </AnimatePresence>
+        <div className='p-4'>
+          <LogolongWeb />
+        </div>
+        <div className='flex flex-col items-center mt-16 md:flex-row md:justify-between'>
+          <div className='text-center'>
+            <h1 className='uppercase text-center font-semibold primary-text md:text-[4rem] leading-snug'>
+              <p>Website is</p>
+              Under <br /> Contruction
+            </h1>
+            <div className='mt-16'>
+              <button
+                onClick={() => setIsOpen(true)}
+                className='p-4 rounded-xl primary-bg text-white'>
+                Contact Us
+              </button>
             </div>
           </div>
+          <div className='hidden md:block'>
+            <MaintenanceLogo />
+          </div>
         </div>
-
-        <Slider />
-
-        <Services />
-        <PastClients />
-        <Aboutus />
-        <Contact />
-        <Footer />
       </main>
     </>
   );

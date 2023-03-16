@@ -35,7 +35,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='section-center'>
+    <div id='contact'>
       <h2 className='mb-8 font-semibold text-center text-4xl md:text-5xl md:mb-16'>
         Interested? Let&apos;s talk!
       </h2>
