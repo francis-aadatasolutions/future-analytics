@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import ReCAPTCHA from 'react-google-recaptcha';
 import axios from 'axios';
 
-const Contact = () => {
+const Contact = ({ toggle }) => {
   const [switchContact, setSwitchContact] = useState(true);
   const [isVerified, setIsVerified] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -42,13 +42,21 @@ const Contact = () => {
       <div className='flex justify-center gap-4 mb-4'>
         <button
           onClick={() => setSwitchContact(true)}
-          className='p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer'>
+          className={
+            toggle
+              ? 'p-4 my-4  rounded-xl dark-bg text-white drop-shadow-4xl cursor-pointer'
+              : 'p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer'
+          }>
           <MdEmail className='mx-auto text-2xl' />
           Send a message
         </button>
         <button
           onClick={() => setSwitchContact(false)}
-          className='p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer'>
+          className={
+            toggle
+              ? 'p-4 my-4  rounded-xl dark-bg text-white drop-shadow-4xl cursor-pointer'
+              : 'p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer'
+          }>
           <BsFillCalendarWeekFill className='mx-auto text-xl' />
           Book a Calendly
         </button>
@@ -121,7 +129,11 @@ const Contact = () => {
                 disabled={!isVerified}
                 type='submit'
                 value='Send a message'
-                className='p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
+                className={
+                  toggle
+                    ? 'p-4 my-4  rounded-xl dark-bg text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
+                    : 'p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
+                }
               />
             </div>
           </form>

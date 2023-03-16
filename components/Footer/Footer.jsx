@@ -2,9 +2,14 @@ import React from 'react';
 import { Logolong, LogolongWeb } from '@/assets/SVG/Longlong';
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = ({ toggle }) => {
   return (
-    <div className='pt-16 w-full bg-blue-400 text-white mt-32'>
+    <div
+      className={
+        toggle
+          ? 'pt-16 w-full dark-bg text-white mt-32'
+          : 'pt-16 w-full bg-blue-400 text-white mt-32'
+      }>
       <div className='section-center'>
         <div>
           <div className='md:flex md:justify-between'>
@@ -19,7 +24,7 @@ const Footer = () => {
                 <h2 className='font-semibold text-2xl'>About</h2>
                 <div className='flex flex-col gap-3 text-xl mt-4'>
                   <Link href='/'>
-                    <p className='hover:ml-4'>Home</p>
+                    <p className=''>Home</p>
                   </Link>
                   <Link href='/'>Services</Link>
                   <Link href='/'>About Us</Link>
@@ -40,7 +45,7 @@ const Footer = () => {
         </div>
         <hr className='my-8 ' />
         <div>
-          <p className='text-xl text-center pb-4'>
+          <p className='text-lg text-center pb-4'>
             &#169; 2022-2023 Future Analytics. All rights reserved.
           </p>
         </div>

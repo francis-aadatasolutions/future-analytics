@@ -14,6 +14,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   const item = {
     exit: {
@@ -34,14 +35,28 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>
+      <main className=''>
         <div className=''>
-          <div className='relative bg-hero-pattern bg-cover bg-no-repeat w-full h-screen'>
-            <Headers setIsOpen={setIsOpen} isOpen={isOpen} />
+          <div
+            className={
+              toggle
+                ? 'relative bg-hero-pattern-dark bg-cover bg-no-repeat w-full h-[85vh]'
+                : 'relative bg-hero-pattern bg-cover bg-no-repeat w-full h-[85vh]'
+            }>
+            <Headers
+              setIsOpen={setIsOpen}
+              isOpen={isOpen}
+              setToggle={setToggle}
+              toggle={toggle}
+            />
             <AnimatePresence>
               {isOpen && (
                 <motion.div
-                  className='absolute mx-auto pt-8 w-full md:hidden  flex flex-col gap-8 items-center font-semibold responsive-mobile-gradient z-50'
+                  className={
+                    toggle
+                      ? 'absolute mx-auto pt-8 w-full flex flex-col gap-8 items-center font-semibold dark-bg z-50  md:hidden '
+                      : 'absolute mx-auto pt-8 w-full flex flex-col gap-8 items-center font-semibold responsive-mobile-gradient z-50  md:hidden '
+                  }
                   variants={item}
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: '100vh', opacity: 1 }}
@@ -59,7 +74,7 @@ export default function Home() {
               )}
             </AnimatePresence>
             <div className='section-center'>
-              <CTASection />
+              <CTASection setToggle={setToggle} toggle={toggle} />
             </div>
           </div>
         </div>
@@ -69,8 +84,8 @@ export default function Home() {
         <Services />
         <PastClients />
         <Aboutus />
-        <Contact />
-        <Footer />
+        <Contact toggle={toggle} />
+        <Footer toggle={toggle} />
       </main>
     </>
   );

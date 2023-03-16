@@ -7,6 +7,9 @@ import powerBiconsultant from '../../assets/images/services/powerBiconsultant.pn
 import buisinessinteligence from '../../assets/images/services/buisinessinteligence.png';
 import { motion } from 'framer-motion';
 import PowerBi from '@/assets/SVG/Services/PowerBi';
+import RapidInternal from '@/assets/SVG/Services/RapidInternal';
+import PowerBIAzure from '@/assets/SVG/Services/powerBIazure';
+import DataApps from '@/assets/SVG/Services/DataApps';
 
 const Services = () => {
   const variants = {
@@ -46,7 +49,7 @@ const Services = () => {
           All the service that we provide
         </h2>
 
-        <div className='hidden bg-hero-pattern2  bg-cover bg-no-repeat w-full md:block'>
+        <div className='hidden   bg-cover bg-no-repeat w-full md:block'>
           <div className='w-full max-w-[1304px] mx-auto '>
             <div className='content-wrap items-center'>
               <motion.div
@@ -54,12 +57,13 @@ const Services = () => {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{ once: true }}>
-                <Image
+                {/* <Image
                   priority
                   src={embeded}
                   alt='Data Apps'
                   className='rounded-lg '
-                />
+                /> */}
+                <DataApps />
               </motion.div>
               <motion.div
                 variants={contentVariants}
@@ -110,12 +114,13 @@ const Services = () => {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{ once: true }}>
-                <Image
+                {/* <Image
                   priority
                   src={rampidinternalapp}
                   alt='Rapid Internal App Development'
                   className='rounded-lg '
-                />
+                /> */}
+                <RapidInternal />
               </motion.div>
             </div>
           </div>
@@ -203,12 +208,13 @@ const Services = () => {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{ once: true }}>
-                <Image
+                <PowerBIAzure />
+                {/* <Image
                   priority
                   src={powerBiconsultant}
                   alt='Power BI & Azure Analysis Services Consultation'
                   className='rounded-lg '
-                />
+                /> */}
               </motion.div>
               <motion.div
                 variants={contentVariants}

@@ -38,6 +38,10 @@ html {
   );
 }
 
+.dark-bg {
+  background: linear-gradient(90.03deg, #2c2c3a 0.92%, #3e3e56 99.61%);
+}
+
 .primary-text {
   @apply text-[#12B7FE];
 }
@@ -126,6 +130,7 @@ html {
   width: calc(250px * 14);
 }
 .slider .slide {
+  margin-top: 2rem;
   height: 100px;
   width: 250px;
 }

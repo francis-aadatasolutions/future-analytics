@@ -2,8 +2,8 @@ import * as React from 'react';
 
 const PowerBi = (props) => (
   <svg
-    width={688}
-    height={443}
+    width={550}
+    height={543}
     viewBox='0 0 988 443'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'

@@ -5,10 +5,10 @@ import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
 import Image from 'next/image';
 
-export const CTASection = () => {
+export const CTASection = ({ setToggle, toggle }) => {
   return (
     <div className='mt-8 md:mt-0'>
-      <div className='flex flex-col md:flex-row md:justify-between items-center gap-48'>
+      <div className='items-center gap-48'>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{
@@ -19,9 +19,9 @@ export const CTASection = () => {
               duration: 0.5,
             },
           }}
-          className='text-center md:text-left md:mt-8'>
+          className='text-center md:mt-8'>
           <h1 className='font-semibold text-[2.5rem] leading-tight md:leading-tight md:text-6xl'>
-            <span className='primary-text md:text-[7rem]'>Supercharge</span>{' '}
+            <span className='text-white md:text-[7rem]'>Supercharge</span>{' '}
             <div className='md:hidden'>
               <TypeAnimation
                 className='font-semibold text-xs mt-3 text-white'
@@ -62,13 +62,18 @@ export const CTASection = () => {
             recusandae? Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Dignissimos
           </p> */}
-          {/* <div className='mt-8'>
-            <button className='p-3 text-white primary-bg rounded-full'>
+          <div className='mt-8'>
+            <button
+              className={
+                toggle
+                  ? 'p-6 text-white text-xl bg-slate-600 rounded-xl'
+                  : 'p-6 text-white text-xl primary-bg rounded-xl'
+              }>
               Get Started
             </button>
-          </div> */}
+          </div>
         </motion.div>
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0 }}
           animate={{
             opacity: 1,
@@ -80,7 +85,7 @@ export const CTASection = () => {
           }}
           className=''>
           <Image src={cta} alt='CTA' />
-        </motion.div>
+        </motion.div> */}
       </div>
     </div>
   );

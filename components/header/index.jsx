@@ -10,7 +10,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { NavbarLinks } from '@/assets/NavbarLinks';
 
-const Headers = ({ isOpen, setIsOpen }) => {
+const Headers = ({ isOpen, setIsOpen, setToggle, toggle }) => {
   return (
     <div className='h-16 md:h-20'>
       <div className=' text-white py-6  md:py-8 w-full shadow-sm'>
@@ -32,7 +32,11 @@ const Headers = ({ isOpen, setIsOpen }) => {
             )}
           </div>
           <Navbar />
-          {/* <div className='hidden md:block'></div> */}
+          <div className='hidden md:block'>
+            <button onClick={() => setToggle(!toggle)} className='text-xl'>
+              Colorblind
+            </button>
+          </div>
         </div>
       </div>
     </div>
