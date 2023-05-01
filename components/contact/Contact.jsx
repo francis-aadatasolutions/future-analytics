@@ -131,8 +131,8 @@ const Contact = ({ toggle }) => {
                 value='Send a message'
                 className={
                   toggle
-                    ? 'p-4 my-4  rounded-xl dark-bg text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
-                    : 'p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer disabled:opacity-50'
+                    ? 'p-4 my-4  rounded-xl dark-bg text-white drop-shadow-4xl cursor-pointer disabled:cursor-not-allowed disabled:opacity-50'
+                    : 'p-4 my-4  rounded-xl bg-blue-400 text-white drop-shadow-4xl cursor-pointer disabled:cursor-not-allowed disabled:opacity-50'
                 }
               />
             </div>
