@@ -1,7 +1,7 @@
 import image1 from '../assets/images/stories/Image1.png';
 import image2 from '../assets/images/stories/Image2.png';
-import image3 from '../assets/images/stories/Image3.png';
-import image4 from '../assets/images/stories/Image4.png';
+import image3 from '../assets/images/stories/image3.png';
+import image4 from '../assets/images/stories/image4.png';
 
 export const successStories = [
   {
