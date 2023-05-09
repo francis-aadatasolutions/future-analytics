@@ -9,7 +9,7 @@ const AboutSection = () => {
       <h4 className='font-bold text-4xl leading-snug text-primary'>
         Why Choose Future Analytics?
       </h4>
-      <div className='flex justify-between items-center'>
+      <div className='flex flex-col md:flex-row md:justify-between items-center'>
         <Image
           src={whychoosefutureanalytics}
           alt='Why Choose Future Analytics'

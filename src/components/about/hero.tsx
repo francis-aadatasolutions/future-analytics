@@ -6,8 +6,10 @@ const Hero = () => {
   return (
     <div className='section-center flex justify-between items-center gap-7 text-white py-24'>
       <div className='max-w-3xl'>
-        <h4 className='font-bold text-5xl leading-snug'>About us</h4>
-        <p className='text-lg mt-8'>
+        <h4 className='font-bold text-5xl leading-snug text-center md:text-left'>
+          About us
+        </h4>
+        <p className='text-xl  mt-8'>
           At Future Analytics, we believe in the power of data-driven
           decision-making to shape the future of your business. Our diverse team
           of web developers, data engineers, and data visualization experts is
@@ -16,7 +18,7 @@ const Hero = () => {
         </p>
       </div>
       <div>
-        <Image src={hero} alt='Servicehero' className='' />
+        <Image src={hero} alt='Servicehero' className='hidden md:block' />
       </div>
     </div>
   );

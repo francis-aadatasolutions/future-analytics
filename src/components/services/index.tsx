@@ -44,7 +44,7 @@ const Services = () => {
                     <h5 className='text-2xl font-semibold text-secondary'>
                       {title}
                     </h5>
-                    <p>{description}</p>
+                    <p>{description.substring(0, 100)}...</p>
                     <div className='flex space-x-4 mt-10'>
                       <Link
                         href={`/services/service-details/${id}`}

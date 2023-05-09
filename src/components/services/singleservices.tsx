@@ -13,7 +13,7 @@ const Singleservices = () => {
   return (
     <article className='section-center py-28'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-12'>
-        {serviceContent.map((item) => {
+        {serviceContent.map((item, index) => {
           const {
             description,
             id,
@@ -25,7 +25,7 @@ const Singleservices = () => {
           } = item;
           return (
             <>
-              <div>
+              <div key={index}>
                 <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
                   {title}
                 </h4>
@@ -53,7 +53,7 @@ const Singleservices = () => {
       <div className='mt-12'>
         <Image
           src={singleService?.subImages as any}
-          alt={singleService?.title as string}
+          alt='Data Image'
           className='w-full'
         />
       </div>

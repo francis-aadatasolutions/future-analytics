@@ -78,6 +78,13 @@ h5 {
     rgba(32, 12, 155, 0.77) 100.36%
   );
 }
+.gradient-nav {
+  background: linear-gradient(
+    113.1deg,
+    #0e458a 70%,
+    rgba(32, 12, 155, 0.77) 100.36%
+  );
+}
 
 .section-center {
   width: 90vw;

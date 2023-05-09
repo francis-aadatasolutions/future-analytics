@@ -11,12 +11,12 @@ const SingleCaseStudyDetails = () => {
 
   const serviceContent = successStories.filter((item) => item.id === id);
   return (
-    <section className='section-center p-32'>
+    <section className='section-center py-32'>
       {serviceContent.map((item, index) => {
         const { description, id, image, title, content } = item;
         return (
           <article key={index}>
-            <div className='w-full max-w-2xl'>
+            <div className='w-full md:max-w-2xl'>
               <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
                 {title}
               </h4>
