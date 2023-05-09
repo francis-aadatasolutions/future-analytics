@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+table {
+  border-spacing: 0;
+  border: 1px solid black;
+}
+
+table th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+table tr:last-child td {
+  border-bottom: 0;
+}
+
+table th,
+td {
+  margin: 0;
+  padding: 0.5rem;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+
+table th:last-child,
+td:last-child {
+  border-right: 0;
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+
+}
+h5 {
+  font-size: 0.875rem;
+} */
+
+@media (min-width: 768px) {
+  .reverse:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+.gradient-bg {
+  background: linear-gradient(
+    113.1deg,
+    #0e458a 0%,
+    rgba(32, 12, 155, 0.77) 100.36%
+  );
+}
+
+.section-center {
+  width: 90vw;
+  max-width: 1370px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+.center {
+  width: 90vw;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* @media (min-width: 768px) {
+  .center {
+    width: 95vw;
+  }
+} */
+
+/* swiper js */
+.swiper {
+  width: 50%;
+  height: 100%;
+  border-radius: 19px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  object-fit: fill;
+}
+
+.layout {
+  display: flex;
+  gap: 16px;
+}
+
+@media screen and (max-width: 751px) {
+  .layout {
+    display: block;
+  }
+}
+
+.layout .content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.breadcrumb {
+  display: flex;
+  gap: 24px;
+  list-style-type: '/  ';
+  padding: 8px 16px;
+  border-bottom: 1px solid lightgray;
+}
+
+.breadcrumb a {
+  color: blue;
+  text-decoration: none;
+}
+
+.menu {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-right: 1px solid lightgray;
+}
+
+.menu a {
+  color: black;
+}
+
+.menu .active {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 751px) {
+  .menu {
+    border-right: none;
+    border-bottom: 1px solid lightgray;
+  }
+}
+
+.menu ul {
+  padding-left: 16px;
+}
