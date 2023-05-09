@@ -1,30 +1,23 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
 
     // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'hero-pattern': "url('/bg5.svg')",
-        'hero-pattern-dark': "url('/darkbg.svg')",
-        'hero-pattern2': "url('/circlebg.svg')",
-        'aboutus-pattern': "url('/aboutus.svg')",
-      },
-      dropShadow: {
-        '4xl': ['0px 4px 5px rgba(0, 0, 0, 0.10)'],
-
-        '7xl': [
-          ' -6px -6px 8px rgba(255, 255, 255, 0.6)',
-          '6px 6px 8px rgba(117, 117, 117, 0.25)',
-        ],
-      },
+    colors: {
+      primary: '#0373FF',
+      secondary: '#023E8A',
+      white: '#ffffff',
+      'light-blue': '#EFF6FF',
+      red: '#FF1469',
+      black: '#000000',
     },
+    extend: {},
   },
   plugins: [],
 };
