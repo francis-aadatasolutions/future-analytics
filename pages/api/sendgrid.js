@@ -4,7 +4,7 @@ sendgrid.setApiKey(process.env.SENDGRID_API_KEY);
 
 async function sendEmail(req, res) {
   try {
-    // console.log("REQ.BODY", req.body);
+    // console.log("REQ.BODY", req.body)
     await sendgrid.send({
       to: 'info@futureanalytics.io', // Your email where you'll receive emails
       from: 'francis.castro@futureanalytics.io', // your website email address here
