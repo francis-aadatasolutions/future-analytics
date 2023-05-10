@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { successStories } from 'src/utils/successStories';
+import { motion } from 'framer-motion';
+import { contentVariants, variants } from 'src/utils/framer';
 
 const RecentCaseStudies = () => {
   return (
@@ -16,7 +18,11 @@ const RecentCaseStudies = () => {
           {successStories.slice(0, 4).map((item, index) => {
             const { id, description, image, title } = item;
             return (
-              <article
+              <motion.article
+                variants={contentVariants}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, amount: 0.2 }}
                 key={index}
                 className='md:flex justify-between md:gap-12'>
                 <div className='flex justify-center'>
@@ -35,7 +41,7 @@ const RecentCaseStudies = () => {
                     </Link>
                   </div>
                 </div>
-              </article>
+              </motion.article>
             );
           })}
         </div>

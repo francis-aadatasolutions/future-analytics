@@ -76,14 +76,14 @@ const ContactForm = () => {
         }
       />
       {errors.message && <p className='text-red'>Message is required.</p>}
-      {/* <ReCAPTCHA
+      <ReCAPTCHA
         className='mx-auto mt-4'
         sitekey={process.env.NEXT_PUBLIC_SITE_KEY as string}
         onChange={onChange}
-      /> */}
+      />
       <div className='mx-auto'>
         <input
-          disabled={isVerified}
+          disabled={!isVerified}
           type='submit'
           value='Send a message'
           className='p-4 my-4  rounded-xl bg-primary text-white drop-shadow-4xl cursor-pointer disabled:cursor-not-allowed disabled:opacity-50'

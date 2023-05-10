@@ -2,12 +2,19 @@ import Image from 'next/image';
 import React from 'react';
 import discoveryportalimage from '../../assets/images/services/dicoveryportalimage.png';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { variants } from 'src/utils/framer';
 
 const Discoveryportal = () => {
   return (
     <section className='bg-light-blue py-24'>
       <div className='section-center'>
-        <div className='flex justify-between items-center gap-10 flex-col md:flex-row'>
+        <motion.div
+          variants={variants}
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: true, amount: 0.2 }}
+          className='flex justify-between items-center gap-10 flex-col md:flex-row'>
           <div>
             <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
               Register on our discovery portal and receive a quote within 24
@@ -30,7 +37,7 @@ const Discoveryportal = () => {
             </div>
           </div>
           <Image src={discoveryportalimage} alt='Data Trends' />
-        </div>
+        </motion.div>
       </div>
     </section>
   );

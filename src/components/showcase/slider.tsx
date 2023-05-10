@@ -5,14 +5,21 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper';
+import { motion } from 'framer-motion';
 import dashboard from '../../assets/images/Dashboard.png';
 import sliderimage2 from '../../assets/sliderimage2.jpg';
 import sliderimage3 from '../../assets/sliderimage3.jpg';
 import Image from 'next/image';
+import { showVariants } from 'src/utils/framer';
 
 const Slider = () => {
   return (
-    <>
+    <motion.div
+      variants={showVariants}
+      initial='hidden'
+      whileInView='visible'
+      viewport={{ once: true, amount: 0.5 }}
+      className='center'>
       <Swiper
         cssMode={true}
         slidesPerView={1}
@@ -35,7 +42,7 @@ const Slider = () => {
           <Image src={sliderimage3} alt='Slider Image 3' className='h-48' />
         </SwiperSlide>
       </Swiper>
-    </>
+    </motion.div>
   );
 };
 

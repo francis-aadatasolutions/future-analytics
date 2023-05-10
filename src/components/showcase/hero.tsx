@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { TypeAnimation } from 'react-type-animation';
 const Hero = () => {
   return (
     <section className='section-center text-white py-32'>

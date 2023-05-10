@@ -3,7 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
 import BtnLink from 'src/HOC/Button';
+import { motion } from 'framer-motion';
 import { successStories } from 'src/utils/successStories';
+import { variants } from 'src/utils/framer';
 
 const SuccessStories = () => {
   const router = useRouter();
@@ -31,7 +33,12 @@ const SuccessStories = () => {
           {serviceContent.slice(0, 3).map((item) => {
             const { id, description, image, title } = item;
             return (
-              <article key={id}>
+              <motion.article
+                variants={variants}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, amount: 0.2 }}
+                key={id}>
                 <div className='flex justify-center'>
                   <Image src={image} alt={title} className='w-full h-52' />
                 </div>
@@ -46,7 +53,7 @@ const SuccessStories = () => {
                   className='p-3 text-primary  border border-primary rounded-md capitalize hover:bg-primary hover:text-white'>
                   Read more
                 </Link>
-              </article>
+              </motion.article>
             );
           })}
         </div>

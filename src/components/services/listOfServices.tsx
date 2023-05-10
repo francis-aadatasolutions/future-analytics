@@ -2,10 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { servicesContent } from 'src/utils/services';
-import databricks from '../../assets/images/services/databricks.png';
-import powerBI from '../../assets/images/services/pbi.png';
-import semanticLayer from '../../assets/images/services/semanticlayer.png';
-import webApps from '../../assets/images/services/web-apps.png';
+import { variants } from 'src/utils/framer';
+import { motion } from 'framer-motion';
 
 const ListOfServices = () => {
   return (
@@ -14,7 +12,11 @@ const ListOfServices = () => {
         {servicesContent.map((item) => {
           const { description, id, images, title, price } = item;
           return (
-            <div
+            <motion.div
+              variants={variants}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.2 }}
               key={id}
               className='flex flex-col items-center gap-8  md:flex-row reverse'>
               <Image src={images} alt={title} className='w-[200px] h-[170px]' />
@@ -36,7 +38,7 @@ const ListOfServices = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

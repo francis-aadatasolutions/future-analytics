@@ -2,9 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import BtnLink from 'src/HOC/Button';
 import { servicesContent } from 'src/utils/services';
+import { contentVariants, variants } from 'src/utils/framer';
 
 const Services = () => {
   const router = useRouter();
@@ -32,7 +34,11 @@ const Services = () => {
             {servicesContent.map((item) => {
               const { description, id, images, title, price } = item;
               return (
-                <div
+                <motion.div
+                  variants={variants}
+                  initial='hidden'
+                  whileInView='visible'
+                  viewport={{ once: true, amount: 0.2 }}
                   key={id}
                   className='flex flex-col items-center gap-4 md:flex-row'>
                   <Image
@@ -58,7 +64,7 @@ const Services = () => {
                       </Link>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               );
             })}
           </div>
@@ -87,7 +93,11 @@ const Services = () => {
         {servicesContent.map((item) => {
           const { description, id, images, title, price } = item;
           return (
-            <div
+            <motion.div
+              variants={variants}
+              initial='hidden'
+              whileInView='visible'
+              viewport={{ once: true, amount: 0.2 }}
               key={id}
               className='flex flex-col items-center gap-4 md:flex-row'>
               <Image src={images} alt={title} className='w-[200px] h-[170px]' />
@@ -95,7 +105,7 @@ const Services = () => {
                 <h5 className='text-2xl font-semibold text-secondary'>
                   {title}
                 </h5>
-                <p>{description}</p>
+                <p>{description.substring(0, 100)}...</p>
                 <div className='flex space-x-4 mt-10'>
                   <Link
                     href={`/services/service-details/${id}`}
@@ -109,7 +119,7 @@ const Services = () => {
                   </Link>
                 </div>
               </div>
-            </div>
+            </motion.div>
           );
         })}
       </div>

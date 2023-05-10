@@ -17,7 +17,7 @@ const Navbar = () => {
   const onScroll = useCallback(
     (event: any) => {
       const { pageYOffset, scrollY } = window;
-      if (pageYOffset > 590) {
+      if (pageYOffset > 390) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);

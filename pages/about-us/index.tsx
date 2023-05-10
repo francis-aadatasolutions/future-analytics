@@ -14,7 +14,7 @@ const AboutPage = () => {
         <Navbar />
         <Hero />
       </div>
-      <OurExperts />
+      {/* <OurExperts /> */}
       <AboutSection />
       <Services />
       <Contact />

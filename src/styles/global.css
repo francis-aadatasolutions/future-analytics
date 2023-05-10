@@ -4,11 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+body {
+  position: relative;
 }
 
 table {
@@ -91,12 +96,23 @@ h5 {
   max-width: 1370px;
   margin: 0 auto;
 }
+.hero-center {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 0 auto;
+}
 
 @media (min-width: 768px) {
   .section-center {
     width: 95vw;
   }
+  .hero-center {
+    width: 95vw;
+  }
 }
+/* @media (min-width: 768px) {
+ 
+} */
 .center {
   width: 90vw;
   max-width: 100%;
@@ -111,7 +127,7 @@ h5 {
 
 /* swiper js */
 .swiper {
-  width: 50%;
+  width: 100%;
   height: 100%;
   border-radius: 19px;
 }
@@ -137,6 +153,14 @@ h5 {
 .layout {
   display: flex;
   gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .swiper {
+    width: 50%;
+    height: 100%;
+    border-radius: 19px;
+  }
 }
 
 @media screen and (max-width: 751px) {

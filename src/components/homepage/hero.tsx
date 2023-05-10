@@ -1,20 +1,29 @@
 import React from 'react';
 import laptopImage from '../../assets/laptop.png';
+import laptopImage2 from '../../assets/laptop2.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   const router = useRouter();
   return (
-    <div className='section-center flex justify-between items-center text-white py-24'>
-      <div className='max-w-4xl'>
+    <div className='hero-center grid grid-cols-1 md:grid-cols-2 items-center text-white py-32'>
+      <div className='max-w-3xl'>
         <p className='text-center md:text-left  text-xl md:text-3xl mb-12'>
           Welcome to FutureAnalytics
         </p>
-        <h4 className='font-bold text-center md:text-left text-2xl md:text-5xl leading-snug'>
-          Pioneering Business Intelligence and Data Visualization Solutions for
-          a Data-Driven Future
-        </h4>
+
+        <TypeAnimation
+          className='font-bold text-center md:text-left text-2xl md:text-5xl md:leading-normal'
+          sequence={[
+            ' Pioneering Business Intelligence and Data Visualization Solutions for a Data-Driven Future',
+          ]}
+          wrapper='h4'
+          cursor={true}
+          repeat={0}
+        />
+
         <div className='flex justify-center md:justify-start space-x-4 mt-10'>
           <button
             onClick={() => router.push('/services')}
@@ -28,9 +37,9 @@ const Hero = () => {
       </div>
       <div>
         <Image
-          src={laptopImage}
-          alt='laptopImage'
-          className='w-[661px] h-[492px] hidden md:block'
+          src={laptopImage2}
+          alt='Microsoft Surface Pro 3'
+          className=' hidden md:block'
         />
       </div>
     </div>
