@@ -1,9 +1,17 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import BtnLink from 'src/HOC/Button';
 import { futureAnalyticsCardContent } from 'src/utils/futureAnalyticsCards';
+import { motion } from 'framer-motion';
+import { descriptionVariants, variants } from 'src/utils/framer';
 
 const WhyChooseFutureAnalytics = () => {
+  const [selectedCard, setSelectedCard] = useState<number | null>(null);
+
+  const handleCardClick = (index: number) => {
+    setSelectedCard(index === selectedCard ? null : index);
+  };
+
   return (
     <section className='py-24 bg-light-blue'>
       <div className='center '>
@@ -20,13 +28,27 @@ const WhyChooseFutureAnalytics = () => {
         <div className='mt-24'>
           <div className='grid grid-cols-1 gap-8 md:grid-cols-5 drop-shadow-md'>
             {futureAnalyticsCardContent.map((item, index) => {
-              const { icon, title } = item;
+              const { icon, title, description } = item;
+              const isCardSelected = index === selectedCard;
               return (
                 <article
+                  onClick={() => handleCardClick(index)}
                   key={index}
-                  className='flex flex-col items-center text-center p-8 bg-white rounded-xl'>
-                  <Image src={icon} alt={title} />
-                  <p className='text-xl font-semibold mt-4'>{title}</p>
+                  className='flex flex-col items-center text-center p-8 bg-white rounded-xl cursor-pointer'>
+                  {isCardSelected ? (
+                    <motion.p
+                      variants={descriptionVariants}
+                      initial='hidden'
+                      whileInView='visible'
+                      viewport={{ once: true, amount: 0.2 }}>
+                      {description}
+                    </motion.p>
+                  ) : (
+                    <>
+                      <Image src={icon} alt={title} />
+                      <p className='text-xl font-semibold mt-4'>{title}</p>
+                    </>
+                  )}
                 </article>
               );
             })}
