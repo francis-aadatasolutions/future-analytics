@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { IoMdArrowForward } from 'react-icons/io';
+import BtnLink from 'src/HOC/Button';
 import { servicesContent } from 'src/utils/services';
 
 const OtherServices = () => {
@@ -20,7 +22,7 @@ const OtherServices = () => {
       <div className='section-center'>
         <div className='grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-24'>
           {serviceContent.slice(0, 3).map((item) => {
-            const { description, id, images, title, price } = item;
+            const { description, id, images, title, subTitle } = item;
             return (
               <div key={id} className='flex flex-col items-center'>
                 <Image
@@ -29,16 +31,17 @@ const OtherServices = () => {
                   className='w-[200px] h-[170px]'
                 />
                 <div className='flex flex-col items-center text-center md:text-left md:items-start'>
-                  <h5 className='text-2xl font-semibold text-secondary '>
+                  <h5 className='text-xl font-semibold text-secondary '>
                     {title}
                   </h5>
-                  <p className='max-w-xl'>{description.substring(0, 200)}...</p>
+                  <p className='mt-4'>{subTitle.substring(0, 100)}...</p>
                   <div className='flex space-x-4 mt-10'>
-                    <Link
-                      href={`/services/service-details/${id}`}
-                      className='p-3 text-primary rounded-md border border-primary capitalize hover:bg-primary hover:text-white'>
-                      Read more
-                    </Link>
+                    <BtnLink
+                      Icon={IoMdArrowForward}
+                      text='Read more'
+                      url={`/services/service-details/${id}`}
+                      className='p-3 text-primary rounded-md border border-primary capitalize hover:bg-primary hover:text-white'
+                    />
                   </div>
                 </div>
               </div>

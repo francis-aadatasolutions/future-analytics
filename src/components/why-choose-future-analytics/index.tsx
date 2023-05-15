@@ -3,12 +3,13 @@ import React, { useState } from 'react';
 import BtnLink from 'src/HOC/Button';
 import { futureAnalyticsCardContent } from 'src/utils/futureAnalyticsCards';
 import { motion } from 'framer-motion';
-import { descriptionVariants, variants } from 'src/utils/framer';
+import { descriptionVariants } from 'src/utils/framer';
+import { FiHexagon } from 'react-icons/fi';
 
 const WhyChooseFutureAnalytics = () => {
   const [selectedCard, setSelectedCard] = useState<number | null>(null);
 
-  const handleCardClick = (index: number) => {
+  const handleCardHover = (index: number) => {
     setSelectedCard(index === selectedCard ? null : index);
   };
 
@@ -22,7 +23,11 @@ const WhyChooseFutureAnalytics = () => {
             </h4>
           </div>
           <div className='mt-12 md:mt-0'>
-            <BtnLink url='/about-us' text='Find out more about us' />
+            <BtnLink
+              Icon={FiHexagon}
+              url='/about-us'
+              text='Find out more about us'
+            />
           </div>
         </div>
         <div className='mt-24'>
@@ -32,7 +37,8 @@ const WhyChooseFutureAnalytics = () => {
               const isCardSelected = index === selectedCard;
               return (
                 <article
-                  onClick={() => handleCardClick(index)}
+                  onMouseEnter={() => handleCardHover(index)}
+                  onMouseLeave={() => setSelectedCard(null)}
                   key={index}
                   className='flex flex-col items-center text-center p-8 bg-white rounded-xl cursor-pointer'>
                   {isCardSelected ? (

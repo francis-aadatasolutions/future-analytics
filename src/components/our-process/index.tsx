@@ -1,6 +1,7 @@
 import React from 'react';
 import dataTrends from '../../assets/Data-Trends.png';
 import Image from 'next/image';
+import OurProcessSVG from 'src/assets/SVG/OurProcess.svg';
 
 const OurProcess = () => {
   return (
@@ -23,7 +24,8 @@ const OurProcess = () => {
               business.
             </p>
           </div>
-          <Image src={dataTrends} alt='Data Trends' />
+          {/* <Image src={dataTrends} alt='Data Trends' /> */}
+          <OurProcessSVG />
         </div>
       </div>
     </section>

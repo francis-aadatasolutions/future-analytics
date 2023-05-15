@@ -8,7 +8,6 @@ import Showcase from '@components/showcase';
 import SuccessStories from '@components/successStories';
 import Technologies from '@components/technologies';
 import WhyChooseFutureAnalytics from '@components/why-choose-future-analytics';
-import { NavigateToResource } from '@refinedev/nextjs-router';
 import Head from 'next/head';
 
 export default function Home() {
@@ -20,7 +19,7 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <main>
+      <main className=' '>
         <HomePage />
         <Services />
         <SuccessStories />
