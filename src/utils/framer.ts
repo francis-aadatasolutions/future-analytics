@@ -8,7 +8,7 @@ export const variants = {
     y: 0,
     transition: {
       delay: 0.2,
-      duration: 0.7,
+      duration: 0.5,
     },
   },
 };

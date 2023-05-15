@@ -33,7 +33,13 @@ const Slider = () => {
         modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         className='mySwiper relative'>
         <SwiperSlide>
-          <Image src={dashboard} alt='Dashboard' />
+          <iframe
+            title='Report Section'
+            className='w-full'
+            height='373.5'
+            src='https://app.powerbi.com/view?r=eyJrIjoiOTMzYjJmYmUtZTMxNC00OGJmLTgyODAtZDkwYzFlYmQ0ZTliIiwidCI6IjE1NzkwYjE2LTljYTUtNGJmMi1iZDY2LTgyY2Y3ZmYzMjUwNyJ9'
+            frameBorder='0'
+            allowFullScreen={true}></iframe>
         </SwiperSlide>
         <SwiperSlide>
           <Image src={sliderimage2} alt='Slider Image 2' className='h-48' />

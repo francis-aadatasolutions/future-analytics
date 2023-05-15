@@ -2,11 +2,16 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 import BtnLink from 'src/HOC/Button';
 import { servicesContent } from 'src/utils/services';
-import { contentVariants, variants } from 'src/utils/framer';
+import { variants } from 'src/utils/framer';
+import parser from 'html-react-parser';
+import { IoMdArrowForward } from 'react-icons/io';
+import { FaGgCircle } from 'react-icons/fa';
+
+import { TbHexagon3D } from 'react-icons/tb';
 
 const Services = () => {
   const router = useRouter();
@@ -27,12 +32,16 @@ const Services = () => {
               </p>
             </div>
             <div className='mt-12 md:mt-0 capitalize'>
-              <BtnLink url='/services' text='see what we do' />
+              <BtnLink
+                Icon={TbHexagon3D}
+                url='/services'
+                text='see what we do'
+              />
             </div>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-12 mt-12'>
             {servicesContent.map((item) => {
-              const { description, id, images, title, price } = item;
+              const { description, id, images, title, price, subTitle } = item;
               return (
                 <motion.div
                   variants={variants}
@@ -50,18 +59,20 @@ const Services = () => {
                     <h5 className='text-2xl font-semibold text-secondary'>
                       {title}
                     </h5>
-                    <p>{description.substring(0, 100)}...</p>
+                    <p>{subTitle}</p>
+
                     <div className='flex space-x-4 mt-10'>
-                      <Link
-                        href={`/services/service-details/${id}`}
-                        className='p-3 text-primary rounded-md border border-primary capitalize hover:bg-primary hover:text-white'>
-                        Read more
-                      </Link>
-                      <Link
-                        href='/port'
-                        className='p-3 text-white bg-primary rounded-md capitalize'>
-                        Get Quote
-                      </Link>
+                      <BtnLink
+                        Icon={IoMdArrowForward}
+                        text='Read more'
+                        url={`/services/service-details/${id}`}
+                        className='p-3 text-primary rounded-md border border-primary capitalize hover:bg-primary hover:text-white'
+                      />
+                      <BtnLink
+                        Icon={FaGgCircle}
+                        text='Get Quote'
+                        url='https://futureanalyticsportal.vercel.app/'
+                      />
                     </div>
                   </div>
                 </motion.div>
@@ -86,12 +97,12 @@ const Services = () => {
           </p>
         </div>
         <div className='mt-12 md:mt-0 capitalize'>
-          <BtnLink url='/services' text='see what we do' />
+          <BtnLink Icon={TbHexagon3D} url='/services' text='see what we do' />
         </div>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-12 mt-12'>
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 mt-12'>
         {servicesContent.map((item) => {
-          const { description, id, images, title, price } = item;
+          const { description, id, images, title, price, subTitle } = item;
           return (
             <motion.div
               variants={variants}
@@ -105,18 +116,21 @@ const Services = () => {
                 <h5 className='text-2xl font-semibold text-secondary'>
                   {title}
                 </h5>
-                <p>{description.substring(0, 100)}...</p>
+
+                <p>{subTitle}</p>
+
                 <div className='flex space-x-4 mt-10'>
-                  <Link
-                    href={`/services/service-details/${id}`}
-                    className='p-3 text-primary rounded-md border border-primary capitalize hover:bg-primary hover:text-white'>
-                    Read more
-                  </Link>
-                  <Link
-                    href='/port'
-                    className='p-3 text-white bg-primary rounded-md capitalize'>
-                    Get Quote
-                  </Link>
+                  <BtnLink
+                    Icon={IoMdArrowForward}
+                    text='Read more'
+                    url={`/services/service-details/${id}`}
+                    className='p-3 text-primary rounded-md border border-primary capitalize hover:bg-primary hover:text-white'
+                  />
+                  <BtnLink
+                    Icon={FaGgCircle}
+                    text='Get Quote'
+                    url='https://futureanalyticsportal.vercel.app/'
+                  />
                 </div>
               </div>
             </motion.div>

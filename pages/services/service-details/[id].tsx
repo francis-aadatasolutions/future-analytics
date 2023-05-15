@@ -9,12 +9,14 @@ import React from 'react';
 const ServiceDetails = () => {
   return (
     <>
-      <Navbar />
-      <Singleservices />
-      <SuccessStories />
-      <OtherServices />
-      <Contact />
-      <Footer />
+      <main>
+        <Navbar />
+        <Singleservices />
+        <SuccessStories />
+        <OtherServices />
+        <Contact />
+        <Footer />
+      </main>
     </>
   );
 };

@@ -29,10 +29,7 @@ const Contact = () => {
             <h4 className='capitalize font-bold text-primary my-8 text-3xl text-center md:text-4xl'>
               Book a calendly
             </h4>
-            <InlineWidget
-              url='https://calendly.com/alexander-186/experiment1et'
-              styles={{ height: '450px' }}
-            />
+            <InlineWidget url='https://calendly.com/alexander-186/experiment1et' />
           </div>
         </div>
       </div>

@@ -29,6 +29,6 @@ export const navbarLinks: INavbar[] = [
   {
     id: 6,
     name: 'client portal',
-    url: '/client-portal',
+    url: 'https://futureanalyticsportal.vercel.app',
   },
 ];
