@@ -80,7 +80,7 @@ const Navbar = () => {
           <nav className='hidden md:block relative'>
             <ul className='flex gap-12'>
               {navbarLinks.map((item) => {
-                const { id, name, url, subLinks } = item;
+                const { id, name, url, subLinks, target } = item;
                 const isSublinksVisible = activeLink === id;
 
                 return (
@@ -91,6 +91,8 @@ const Navbar = () => {
                       onMouseLeave={onMouseLeave}>
                       <Link
                         href={url}
+                        target={target}
+                        rel='noreferrer'
                         className={
                           router.pathname === url
                             ? 'pb-2 border-b-2  border-b-[#709cef] text-[#7aa6f8]  text-sm'

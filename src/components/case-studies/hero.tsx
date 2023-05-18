@@ -14,7 +14,7 @@ const Hero = () => {
         </div>
       </section>
 
-      <div className='circles'>
+      {/* <div className='circles'>
         <ul>
           <li></li>
           <li></li>
@@ -27,7 +27,7 @@ const Hero = () => {
           <li></li>
           <li></li>
         </ul>
-      </div>
+      </div> */}
     </>
   );
 };

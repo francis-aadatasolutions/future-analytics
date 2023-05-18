@@ -33,9 +33,3 @@ const HomePage = () => {
 };
 
 export default HomePage;
-
-// ${
-//   showAnimation
-//     ? ' bg-hero-main  bg-cover bg-no-repeat  w-full h-full'
-//     : 'bg-hero-plain  bg-cover bg-no-repeat  w-full h-full'
-// }`

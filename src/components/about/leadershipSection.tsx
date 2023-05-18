@@ -20,40 +20,39 @@ const LeadershipSection = () => {
                 <p className='italic'>CEO and Founder</p>
               </div>
             </div>
-            <p className='text-lg my-4'>
-              As the CEO and Founder of Future Analytics, my journey in the data
-              analytics sector has been nothing short of transformative.
-              Commencing my career as a Marketing Executive and Sales Analyst, I
-              quickly honed my skills in business analysis, implementation and
-              through working with general managers from over 20 countries to
-              drive sales, service, and marketing performance through process
-              efficiencies and analytics across EMEA and APAC regions.
-            </p>
+            <div className='mt-12'>
+              <p className='text-lg my-4'>
+                I've had a dynamic journey in the data analytics industry.
+                Starting as a Marketing Executive and Sales Analyst, I quickly
+                understood how to boost sales and marketing performance across a
+                diverse range of countries. Next, I ran AA Consultancy as an
+                independent contractor. There, I developed Power BI Models and
+                Dashboards for a variety of businesses, from SMEs and franchises
+                to FTSE 100 and NYSE 100 corporations, spanning retail,
+                manufacturing, tech startups, and more.
+              </p>
 
-            <p className='text-lg my-4'>
-              We led a large-scale MI Simplification project at Walgreens Boots
-              Alliance. My dedication to bridging the gap between IT teams and
-              business leaders led to my position as Director of Power BI
-              Solutions at AA Consultancy, where I developed Power BI Models and
-              Dashboards for multiple departments of a NYSE 100 listed
-              manufacturing company.
-            </p>
+              <p className='text-lg my-4'>
+                One key project was at Walgreens Boots Alliance, where I led a
+                departmental transformation. We moved from legacy systems to
+                Azure, instilled best practices in tabular modelling and SQL
+                development, and completely shifted to an agile way of working
+                with Azure DevOps.
+              </p>
 
-            <p className='text-lg my-4'>
-              Now, as the Principal Consultant and Founder of Future Analytics,
-              I'm leveraging my extensive experience to drive innovation in the
-              analytics industry. From pioneering the next wave of analytics
-              with semantic layers and AI technology, to crafting rich app
-              experiences for visualizations, my focus is on delivering
-              customer-centric solutions that translate complex requirements
-              into easy-to-understand terms. I'm passionate about enabling
-              businesses to make data-driven decisions, and my vision for Future
-              Analytics is to continue pushing the boundaries of what's possible
-              in data analytics.
-            </p>
+              <p className='text-lg my-4'>
+                Now, as the founder of Future Analytics, I'm using this vast
+                experience to innovate in analytics. My focus is on
+                customer-centric solutions that make complex data accessible,
+                always with the aim to help businesses make data-driven
+                decisions. My vision for Future Analytics is to push what's
+                possible in this industry, backed by a talented team of
+                developers.
+              </p>
+            </div>
           </div>
 
-          <div className='mt-12'>
+          <div className='mt-24'>
             <div className='flex gap-4 items-center'>
               <Image src={renie} alt='Renie Velasquez' className='w-28 h-28' />
               <div>
@@ -62,30 +61,32 @@ const LeadershipSection = () => {
                 <p className='italic'>Team Delivery Lead</p>
               </div>
             </div>
-            <p className='text-lg my-4'>
-              Renie Velasquez, our Team Delivery Lead, is core to managing our
-              remote technical delivery team. With a deep-rooted understanding
-              of business intelligence (BI) modelling and report development,
-              Renie expertly translates complex technical requirements into
-              actionable strategies for our IT services team.
-            </p>
+            <div className='mt-12'>
+              <p className='text-lg my-4'>
+                Renie Velasquez, our Team Delivery Lead, is core to managing our
+                remote technical delivery team. With a deep-rooted understanding
+                of business intelligence (BI) modelling and report development,
+                Renie expertly translates complex technical requirements into
+                actionable strategies for our IT services team.
+              </p>
 
-            <p className='text-lg my-4'>
-              His vast experience managing remote teams across the globe has
-              been instrumental in ensuring seamless project delivery,
-              regardless of location or time zone. Renie's proactive approach
-              and clear communication have been pivotal in driving our technical
-              team's performance, ensuring we consistently deliver innovative,
-              high-quality solutions for our clients.
-            </p>
+              <p className='text-lg my-4'>
+                His vast experience managing remote teams across the globe has
+                been instrumental in ensuring seamless project delivery,
+                regardless of location or time zone. Renie's proactive approach
+                and clear communication have been pivotal in driving our
+                technical team's performance, ensuring we consistently deliver
+                innovative, high-quality solutions for our clients.
+              </p>
 
-            <p className='text-lg my-4'>
-              In an era where remote work is the norm, Renie's expertise in
-              leading diverse teams ensures our delivery remains agile,
-              adaptable, and above all, efficient. His leadership is a testament
-              to our commitment to excellence in service delivery, and his role
-              is key to our global success.
-            </p>
+              <p className='text-lg my-4'>
+                In an era where remote work is the norm, Renie's expertise in
+                leading diverse teams ensures our delivery remains agile,
+                adaptable, and above all, efficient. His leadership is a
+                testament to our commitment to excellence in service delivery,
+                and his role is key to our global success.
+              </p>
+            </div>
           </div>
         </div>
       </section>

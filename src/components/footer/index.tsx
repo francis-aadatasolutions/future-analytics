@@ -53,7 +53,10 @@ const Footer = () => {
             </div>
             <div className='mt-8'>
               <h5 className='font-semibold uppercase'> follow us</h5>
-              <Link href='https://www.linkedin.com/company/futureanalyticsio/'>
+              <Link
+                href='https://www.linkedin.com/company/futureanalyticsio/'
+                target='_blank'
+                rel='noreferrer'>
                 <AiFillLinkedin className='text-4xl' />
               </Link>
             </div>

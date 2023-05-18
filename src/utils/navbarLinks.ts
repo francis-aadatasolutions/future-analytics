@@ -48,5 +48,6 @@ export const navbarLinks = [
     id: 6,
     name: 'client portal',
     url: 'https://futureanalyticsportal.vercel.app',
+    target: '_blank',
   },
 ];

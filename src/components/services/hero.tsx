@@ -35,21 +35,6 @@ const Hero = () => {
           />
         </div>
       </div>
-
-      <div className='circles'>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
     </>
   );
 };

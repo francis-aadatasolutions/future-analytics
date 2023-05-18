@@ -17,7 +17,7 @@ const ServicePage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div className='relative flex flex-col justify-center items-center p-4 gradient-bg'>
+        <div className='relative flex flex-col justify-center items-center p-4 bg-dark-blue'>
           <Navbar />
           <Hero />
         </div>
