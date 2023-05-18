@@ -78,7 +78,7 @@ const Technologies = () => {
             return (
               <div
                 key={index}
-                className=' h-fit p-3 bg-white  drop-shadow-7xl rounded-lg'>
+                className=' h p-3 bg-white h-20 drop-shadow-7xl rounded-lg flex justify-center items-center'>
                 <AnimatePresence>
                   {hoverIndex === index ? (
                     <motion.div
