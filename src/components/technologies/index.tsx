@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  azure,
-  cube,
-  databricks,
-  react,
-  refine,
-  vega,
-} from '../../assets/images/technologies';
+
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import ColoredCube from 'src/assets/SVG/Cube/ColoredCube';
