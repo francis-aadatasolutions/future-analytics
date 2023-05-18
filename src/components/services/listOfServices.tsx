@@ -13,10 +13,9 @@ const ListOfServices = () => {
   return (
     <div className='bg-hero-circle  bg-cover bg-no-repeat  w-full h-full'>
       <section className='section-center py-24'>
-        <div className='space-y-24'>
+        <div className=''>
           {servicesContent.map((item) => {
             const {
-              description,
               id,
               images,
               title,
@@ -38,6 +37,7 @@ const ListOfServices = () => {
                   alt={title}
                   className='w-[500px] h-[500px]'
                 />
+
                 <div className='flex flex-col items-center text-center md:text-left md:items-start custom-even-child'>
                   <p className='text-2xl md:text-5xl font-semibold text-secondary '>
                     {servicePageTitle ? servicePageTitle : title}

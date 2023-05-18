@@ -1,6 +1,6 @@
 import Contact from '@components/contact';
 import Footer from '@components/footer';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import Services from '@components/services';
 import Hero from '@components/showcase/hero';
 import Slider from '@components/showcase/slider';

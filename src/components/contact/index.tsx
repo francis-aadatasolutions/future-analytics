@@ -11,7 +11,7 @@ const Contact = () => {
           <div>
             <div className='flex justify-between items-center gap-10 flex-col md:flex-row'>
               <div>
-                <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
+                <h4 className='capitalize font-bold text-secondary mb-3 text-3xl md:text-4xl'>
                   Connect With Us
                 </h4>
                 <p className='max-w-4xl text-lg mt-8'>
@@ -25,12 +25,12 @@ const Contact = () => {
               <ContactForm />
             </div>
           </div>
-          <div>
+          {/* <div>
             <h4 className='capitalize font-bold text-primary my-8 text-3xl text-center md:text-4xl'>
               Book a calendly
             </h4>
             <InlineWidget url='https://calendly.com/alexander-186/experiment1et' />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

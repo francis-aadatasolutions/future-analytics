@@ -4,8 +4,8 @@ const DataBricksGray = (
 ) => (
   <svg
     width={126}
-    height={50}
-    viewBox='0 0 126 60'
+    height={70}
+    viewBox='0 0 126 70'
     fill='none'
     xmlns='http://www.w3.org/2000/svg'
     {...props}>

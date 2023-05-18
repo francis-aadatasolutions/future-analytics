@@ -18,7 +18,7 @@ const WhyChooseFutureAnalytics = () => {
       <div className='center '>
         <div className='flex flex-col md:flex-row md:justify-between'>
           <div>
-            <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
+            <h4 className='capitalize font-bold text-secondary mb-3 text-3xl md:text-4xl'>
               Why choose future analytics?
             </h4>
           </div>

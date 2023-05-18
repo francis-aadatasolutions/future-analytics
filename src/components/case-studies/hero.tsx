@@ -1,4 +1,4 @@
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import React from 'react';
 
 const Hero = () => {

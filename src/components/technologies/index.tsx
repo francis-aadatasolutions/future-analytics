@@ -66,7 +66,7 @@ const Technologies = () => {
     <section className=''>
       <div className='center py-32'>
         <div>
-          <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
+          <h4 className='capitalize font-bold text-secondary mb-3 text-3xl md:text-4xl'>
             Technology Partners
           </h4>
           <p className='max-w-2xl text-base'>
@@ -78,7 +78,7 @@ const Technologies = () => {
         </div>
         <div className='relative w-full max-w-5xl mx-auto mt-24 grid grid-cols-2 md:grid-cols-5 items-center gap-10'>
           <div className='absolute top-0 -left-4 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob'></div>
-          <div className='absolute top-0 right-5 w-72 h-72 bg-red rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000'></div>
+          <div className='absolute top-0 right-5 w-72 h-72 bg-red-600 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-2000'></div>
           <div className='absolute -bottom-8 left-20 w-72 h-72 bg-[#6beafb] rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-blob animation-delay-4000'></div>
           {technologies.map((item, index) => {
             const { name, Image1, Image2 } = item;

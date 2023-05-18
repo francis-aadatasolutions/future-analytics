@@ -80,6 +80,12 @@ h5 {
   font-size: 0.875rem;
 } */
 
+.contact-shadow {
+  box-shadow: 6px 6px 12px rgba(216, 224, 233, 0.6), -6px -6px 12px #ffffff,
+    inset -6px -6px 8px rgba(255, 255, 255, 0.25),
+    inset 6px 6px 15px rgba(205, 231, 255, 0.25);
+}
+
 /* background hero animation */
 
 .circles li {

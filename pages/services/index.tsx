@@ -1,6 +1,6 @@
 import Contact from '@components/contact';
 import Footer from '@components/footer';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import Discoveryportal from '@components/services/discoveryPortal';
 import Hero from '@components/services/hero';
 import ListOfServices from '@components/services/listOfServices';

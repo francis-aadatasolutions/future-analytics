@@ -2,7 +2,7 @@ import Hero from '@components/case-studies/hero';
 import RecentCaseStudies from '@components/case-studies/recent';
 import Contact from '@components/contact';
 import Footer from '@components/footer';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import Head from 'next/head';
 import React from 'react';
 

@@ -4,6 +4,7 @@ import discoveryportalimage from '../../assets/images/services/dicoveryportalima
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { variants } from 'src/utils/framer';
+import BtnLink from 'src/HOC/Button';
 
 const Discoveryportal = () => {
   return (
@@ -16,7 +17,7 @@ const Discoveryportal = () => {
           viewport={{ once: true, amount: 0.2 }}
           className='flex justify-between items-center gap-10 flex-col md:flex-row'>
           <div>
-            <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
+            <h4 className='capitalize font-bold text-secondary mb-3 text-3xl md:text-4xl'>
               Register on our discovery portal and receive a quote within 24
               hours.
             </h4>
@@ -29,11 +30,11 @@ const Discoveryportal = () => {
               strategy.
             </p>
             <div className='mt-8'>
-              <Link
-                href='/portal'
-                className='p-3 text-white bg-primary rounded-md capitalize'>
-                Visit Discovery Portal
-              </Link>
+              <BtnLink
+                text='Visit discovery portal'
+                url='https://futureanalyticsportal.vercel.app'
+                className='p-3 text-white bg-secondary rounded-md capitalize'
+              />
             </div>
           </div>
           <Image src={discoveryportalimage} alt='Data Trends' />

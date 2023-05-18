@@ -2,11 +2,12 @@ import Hero from '@components/about/hero';
 import OurExperts from '@components/about/ourExperts';
 import Contact from '@components/contact';
 import Footer from '@components/footer';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import Services from '@components/services';
-import AboutSection from '@components/why-choose-future-analytics/aboutSection';
+
 import Head from 'next/head';
 import React from 'react';
+import LeadershipSection from '@components/about/leadershipSection';
 
 const AboutPage = () => {
   return (
@@ -18,12 +19,12 @@ const AboutPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div className='relative flex flex-col justify-center items-center p-4 gradient-bg'>
+        <div className='relative flex flex-col justify-center items-center'>
           <Navbar />
           <Hero />
         </div>
-        {/* <OurExperts /> */}
-        <AboutSection />
+
+        <LeadershipSection />
         <Services />
         <Contact />
         <Footer />
