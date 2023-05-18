@@ -31,7 +31,7 @@ const WhyChooseFutureAnalytics = () => {
           </div>
         </div>
         <div className='mt-24'>
-          <div className='grid grid-cols-1 gap-8 md:grid-cols-5 drop-shadow-md'>
+          <div className='grid grid-cols-1 gap-8 md:grid-cols-5 drop-shadow-5xl'>
             {futureAnalyticsCardContent.map((item, index) => {
               const { icon, title, description } = item;
               const isCardSelected = index === selectedCard;
@@ -40,7 +40,7 @@ const WhyChooseFutureAnalytics = () => {
                   onMouseEnter={() => handleCardHover(index)}
                   onMouseLeave={() => setSelectedCard(null)}
                   key={index}
-                  className='flex flex-col items-center text-center p-8 bg-white rounded-xl cursor-pointer'>
+                  className='flex flex-col items-center text-center p-8 bg-light-blue rounded-xl cursor-pointer'>
                   {isCardSelected ? (
                     <motion.p
                       variants={descriptionVariants}

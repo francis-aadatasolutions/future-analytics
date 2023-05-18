@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
-import heroimage from '../../assets/images/hero/homepage/newlaptop.png';
-// import heroimage from '../../assets/images/hero/homepage/hero.png';
+// import heroimage from '../../assets/images/hero/homepage/newlaptop.png';
+import heroimage from '../../assets/images/hero/homepage/hero.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { TypeAnimation } from 'react-type-animation';
@@ -31,10 +31,11 @@ const Hero = () => {
   };
 
   return (
-    <div className='center pt-24 pb-32'>
-      <div className=' section-center grid grid-cols-1 md:grid-cols-[600px_2fr] text-white'>
-        <div className='max-w-full'>
+    <div className='center pt-16 pb-32'>
+      <div className=' grid grid-cols-1 md:grid-cols-[600px_2fr] text-white'>
+        <div className=' md:ml-24'>
           <motion.div
+            className='absolute'
             initial={{ scale: 1.2, marginLeft: 70 }}
             animate={controls}
             transition={{
@@ -60,7 +61,7 @@ const Hero = () => {
                 duration: 0.6,
               },
             }}
-            className='text-center text-2xl mt-12 md:text-left'>
+            className='text-center text-2xl mt-24 md:text-left'>
             We build data solutions <br /> and apps for lasting impact
           </motion.p>
         </div>

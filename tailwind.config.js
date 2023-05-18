@@ -154,8 +154,8 @@ module.exports = {
           '4px 4px 8px rgba(120, 120, 120, 0.15)',
         ],
         '5xl': [
-          '-6px -6px 8px #FFFFFF',
-          '6px 6px 8px rgba(216, 224, 233, 0.6)',
+          '-6px -6px 5px #FFFFFF',
+          '6px 6px 5px rgba(216, 224, 233, 0.6)',
         ],
         '6xl': ['0px 4px 20px rgba(90, 176, 224, 0.1)'],
         '7xl': ['0 5px 10px rgba(0, 0, 0, 0.1)'],

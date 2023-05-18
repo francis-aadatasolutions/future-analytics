@@ -2,6 +2,8 @@ import React from 'react';
 import alex from '../../assets/images/talents/alex.png';
 import renie from '../../assets/images/talents/renie.png';
 import Image from 'next/image';
+import Link from 'next/link';
+import { AiFillLinkedin } from 'react-icons/ai';
 
 const LeadershipSection = () => {
   return (
@@ -18,6 +20,12 @@ const LeadershipSection = () => {
                 <p className='font-semibold'>Alexander Amlani</p>
 
                 <p className='italic'>CEO and Founder</p>
+                <Link
+                  href='https://www.linkedin.com/in/alexanderamlani/'
+                  target='_blank'
+                  rel='noreferrer'>
+                  <AiFillLinkedin className='text-4xl mt-2 text-blue-600' />
+                </Link>
               </div>
             </div>
             <div className='mt-12'>
@@ -59,6 +67,12 @@ const LeadershipSection = () => {
                 <p className='font-semibold'>Renie Velasquez</p>
 
                 <p className='italic'>Team Delivery Lead</p>
+                <Link
+                  href='https://www.linkedin.com/in/renie-v-b67b14251/'
+                  target='_blank'
+                  rel='noreferrer'>
+                  <AiFillLinkedin className='text-4xl mt-2 text-blue-600' />
+                </Link>
               </div>
             </div>
             <div className='mt-12'>
