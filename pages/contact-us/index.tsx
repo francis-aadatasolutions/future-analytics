@@ -3,6 +3,7 @@ import Footer from '@components/footer';
 import Navbar from 'src/HOC/Navigation';
 import Head from 'next/head';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const ContactUs = () => {
   return (
@@ -17,6 +18,7 @@ const ContactUs = () => {
         <Navbar />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

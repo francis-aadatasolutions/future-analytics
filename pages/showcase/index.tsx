@@ -6,6 +6,7 @@ import Hero from '@components/showcase/hero';
 import Slider from '@components/showcase/slider';
 import Head from 'next/head';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const ShowcasePage = () => {
   return (
@@ -27,6 +28,7 @@ const ShowcasePage = () => {
         <Services />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

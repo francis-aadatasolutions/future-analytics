@@ -5,6 +5,7 @@ import Navbar from 'src/HOC/Navigation';
 import Services from '@components/services';
 import SuccessStories from '@components/successStories';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const CaseStudyDetails = () => {
   return (
@@ -15,6 +16,7 @@ const CaseStudyDetails = () => {
       <Services />
       <Contact />
       <Footer />
+      <BackToTopButton />
     </main>
   );
 };

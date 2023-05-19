@@ -6,6 +6,7 @@ import Hero from '@components/services/hero';
 import ListOfServices from '@components/services/listOfServices';
 import Head from 'next/head';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const ServicePage = () => {
   return (
@@ -25,6 +26,7 @@ const ServicePage = () => {
         <Discoveryportal />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

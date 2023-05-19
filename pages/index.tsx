@@ -10,6 +10,7 @@ import Technologies from '@components/technologies';
 import WhyChooseFutureAnalytics from '@components/why-choose-future-analytics';
 import Head from 'next/head';
 import { PowerBIVector } from 'src/assets/SVG/Services/PowerBI';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Showcase />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

@@ -5,6 +5,7 @@ import OtherServices from '@components/services/otherServices';
 import Singleservices from '@components/services/singleservices';
 import SuccessStories from '@components/successStories';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const ServiceDetails = () => {
   return (
@@ -16,6 +17,7 @@ const ServiceDetails = () => {
         <SuccessStories />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

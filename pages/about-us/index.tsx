@@ -8,6 +8,7 @@ import Services from '@components/services';
 import Head from 'next/head';
 import React from 'react';
 import LeadershipSection from '@components/about/leadershipSection';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const AboutPage = () => {
   return (
@@ -28,6 +29,7 @@ const AboutPage = () => {
         <Services />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );
