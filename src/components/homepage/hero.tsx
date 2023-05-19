@@ -79,7 +79,7 @@ const Hero = () => {
           <Image
             src={heroimage}
             alt='Microsoft Surface Pro 3'
-            className=' absolute top-0 z-20 hidden  md:flex md:justify-end items-end h-[400px]'
+            className=' absolute top-0 z-10 hidden  md:flex md:justify-end items-end h-[400px]'
           />
         </motion.div>
       </div>

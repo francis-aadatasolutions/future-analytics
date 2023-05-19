@@ -59,7 +59,7 @@ const Navbar = () => {
         ? 'text-black '
         : 'text-white'
     } `}>
-      <div className='py-8 md:py-24'>
+      <div className=' py-8 md:py-24'>
         <div className='flex justify-between items-center center'>
           <Link href='/'>
             <Image
@@ -114,7 +114,7 @@ const Navbar = () => {
                     </div>
                     {name === 'services' && isSublinksVisible && subLinks ? (
                       <div
-                        className='absolute z-10 font-normal bg-blue-100 divide-y divide-gray-100 rounded-lg shadow w-fit'
+                        className='absolute z-[999] font-normal bg-blue-100 divide-y divide-gray-100 rounded-lg shadow w-fit'
                         onMouseEnter={() => onMouseEnter(id)}
                         onMouseLeave={onMouseLeave}>
                         <ul className='py-2 text-sm text-gray-700'>
