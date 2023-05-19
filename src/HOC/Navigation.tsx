@@ -74,7 +74,15 @@ const Navbar = () => {
             />
           </Link>
           <button onClick={() => setIsOpen(!isOpen)}>
-            <GiHamburgerMenu className='text-4xl text-white lg:hidden' />
+            <GiHamburgerMenu
+              className={`text-3xl ${
+                id ||
+                router.pathname === '/contact-us' ||
+                router.pathname === '/about-us'
+                  ? 'text-black '
+                  : 'text-white'
+              } lg:hidden`}
+            />
           </button>
 
           <nav className='hidden lg:block relative'>

@@ -6,7 +6,7 @@ const BackToTopButton = () => {
 
   const handleScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const shouldShowButton = scrollTop > 300; // Change the scroll threshold as needed
+    const shouldShowButton = scrollTop > 300;
 
     setIsVisible(shouldShowButton);
   };
@@ -19,10 +19,8 @@ const BackToTopButton = () => {
   };
 
   useEffect(() => {
-    // Add event listener when component mounts
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup the event listener when component unmounts
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
