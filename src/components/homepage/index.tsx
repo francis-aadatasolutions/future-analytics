@@ -26,7 +26,7 @@ const HomePage = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 1 } }}
-          className='-right-80 absolute w-2/3  h-screen rounded-full bg-secondary'></motion.div>
+          className='-right-80 absolute w-[68%]  h-screen rounded-full bg-secondary'></motion.div>
       )}
     </motion.main>
   );
