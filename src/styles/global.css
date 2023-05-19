@@ -240,6 +240,16 @@ h5 {
 
 @media (min-width: 768px) {
   .center {
+    width: 95vw;
+  }
+}
+@media (min-width: 1280px) {
+  .center {
+    width: 85vw;
+  }
+}
+@media (min-width: 1536px) {
+  .center {
     width: 80vw;
   }
 }

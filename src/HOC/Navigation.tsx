@@ -74,10 +74,10 @@ const Navbar = () => {
             />
           </Link>
           <button onClick={() => setIsOpen(!isOpen)}>
-            <GiHamburgerMenu className='text-4xl text-white md:hidden' />
+            <GiHamburgerMenu className='text-4xl text-white lg:hidden' />
           </button>
 
-          <nav className='hidden md:block relative'>
+          <nav className='hidden lg:block relative'>
             <ul className='flex gap-12'>
               {navbarLinks.map((item) => {
                 const { id, name, url, subLinks, target } = item;

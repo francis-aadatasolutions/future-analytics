@@ -39,7 +39,7 @@ const Services = () => {
               />
             </div>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 mt-12'>
+          <div className='grid grid-cols-1 xl:grid-cols-2 gap-12 md:gap-12 xl:gap-24 mt-12'>
             {servicesContent.map((item) => {
               const { description, id, images, title, price, subTitle } = item;
               return (
@@ -53,7 +53,7 @@ const Services = () => {
                   <Image
                     src={images}
                     alt={title}
-                    className='w-[400px] h-[300px]'
+                    className='w-[350px] h-[300px]'
                   />
                   <div className='flex flex-col items-center text-center md:text-left md:items-start'>
                     <h5 className='text-2xl font-semibold text-secondary mt-4'>
@@ -100,7 +100,7 @@ const Services = () => {
           <BtnLink Icon={TbHexagon3D} url='/services' text='see what we do' />
         </div>
       </div>
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 mt-12'>
+      <div className='grid grid-cols-1 xl:grid-cols-2 gap-12 md:gap-12 xl:gap-24 mt-12'>
         {servicesContent.map((item) => {
           const { description, id, images, title, price, subTitle } = item;
           return (
@@ -111,10 +111,10 @@ const Services = () => {
               viewport={{ once: true, amount: 0.2 }}
               key={id}
               className='flex flex-col items-center gap-4 md:flex-row'>
-              <Image src={images} alt={title} className='w-[400px] h-[300px]' />
+              <Image src={images} alt={title} className='w-[350px] h-[300px]' />
               {/* {SVGComponent} */}
               <div className='flex flex-col items-center text-center md:text-left md:items-start'>
-                <h5 className='text-3xl font-semibold text-secondary'>
+                <h5 className='text-2xl 2xl:text-3xl font-semibold text-secondary'>
                   {title}
                 </h5>
 

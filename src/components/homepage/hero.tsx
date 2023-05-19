@@ -31,11 +31,11 @@ const Hero = () => {
   };
 
   return (
-    <div className='center pt-16 pb-32'>
-      <div className=' grid grid-cols-1 md:grid-cols-[600px_2fr] text-white'>
+    <div className='center pt-4  pb-32'>
+      <div className=' grid grid-cols-1 md:grid-cols-[400px_2fr] lg:grid-cols-[500px_2fr] 2xl:grid-cols-[600px_2fr] text-white'>
         <div className=' md:ml-24'>
           <motion.div
-            className='absolute'
+            className='absolute z-50'
             initial={{ scale: 1.2, marginLeft: 70 }}
             animate={controls}
             transition={{

@@ -31,7 +31,7 @@ const WhyChooseFutureAnalytics = () => {
           </div>
         </div>
         <div className='mt-24'>
-          <div className='grid grid-cols-1 gap-8 md:grid-cols-5 drop-shadow-5xl'>
+          <div className='grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-5 drop-shadow-5xl'>
             {futureAnalyticsCardContent.map((item, index) => {
               const { icon, title, description } = item;
               const isCardSelected = index === selectedCard;

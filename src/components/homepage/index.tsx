@@ -17,7 +17,7 @@ const HomePage = () => {
 
   return (
     <motion.main
-      className={`relative flex flex-col justify-center items-center overflow-hidden duration-500 ${
+      className={`relative w-full flex flex-col justify-center items-center overflow-hidden duration-500 ${
         showAnimation ? 'bg-dark-blue' : 'bg-secondary'
       } `}>
       <Navbar />
@@ -26,7 +26,7 @@ const HomePage = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1, transition: { duration: 1 } }}
-          className='-right-96 absolute w-2/3  h-[1000px] rounded-full bg-secondary'></motion.div>
+          className='-right-80 absolute w-2/3  h-screen rounded-full bg-secondary'></motion.div>
       )}
     </motion.main>
   );
