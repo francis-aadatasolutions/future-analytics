@@ -19,7 +19,7 @@ const SuccessStories = () => {
       <div className='center'>
         <div className=' '>
           <div>
-            <h4 className='capitalize font-bold text-primary  text-3xl md:text-4xl'>
+            <h4 className='capitalize font-bold text-secondary  text-3xl md:text-4xl'>
               {id ? 'Other Case Studies' : 'Case Studies'}
             </h4>
             <button className='my-8 '>

@@ -1,7 +1,7 @@
 import Contact from '@components/contact';
 import Footer from '@components/footer';
 import HomePage from '@components/homepage';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import OurProcess from '@components/our-process';
 import Services from '@components/services';
 import Showcase from '@components/showcase';
@@ -9,6 +9,8 @@ import SuccessStories from '@components/successStories';
 import Technologies from '@components/technologies';
 import WhyChooseFutureAnalytics from '@components/why-choose-future-analytics';
 import Head from 'next/head';
+import { PowerBIVector } from 'src/assets/SVG/Services/PowerBI';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 export default function Home() {
   return (
@@ -29,6 +31,7 @@ export default function Home() {
         <Showcase />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

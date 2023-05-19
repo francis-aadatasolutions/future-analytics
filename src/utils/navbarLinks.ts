@@ -1,10 +1,28 @@
-import { INavbar } from 'src/types/navbar.type';
+// import { INavbar } from 'src/types/navbar.type';
 
-export const navbarLinks: INavbar[] = [
+export const navbarLinks = [
   {
     id: 1,
     name: 'services',
     url: '/services',
+    subLinks: [
+      {
+        name: 'Power BI Delivery Services',
+        url: '/services/service-details/1',
+      },
+      {
+        name: 'Semantic Layer and Data Visualization',
+        url: '/services/service-details/2',
+      },
+      {
+        name: 'Data Platform and Data Visualization',
+        url: '/services/service-details/3',
+      },
+      {
+        name: 'Embedded Analytics',
+        url: '/services/service-details/4',
+      },
+    ],
   },
   {
     id: 2,
@@ -30,5 +48,6 @@ export const navbarLinks: INavbar[] = [
     id: 6,
     name: 'client portal',
     url: 'https://futureanalyticsportal.vercel.app',
+    target: '_blank',
   },
 ];

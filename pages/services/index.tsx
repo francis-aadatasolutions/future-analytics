@@ -1,11 +1,12 @@
 import Contact from '@components/contact';
 import Footer from '@components/footer';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import Discoveryportal from '@components/services/discoveryPortal';
 import Hero from '@components/services/hero';
 import ListOfServices from '@components/services/listOfServices';
 import Head from 'next/head';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const ServicePage = () => {
   return (
@@ -17,7 +18,7 @@ const ServicePage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div className='relative flex flex-col justify-center items-center p-4 gradient-bg'>
+        <div className='relative flex flex-col justify-center items-center p-4 bg-dark-blue'>
           <Navbar />
           <Hero />
         </div>
@@ -25,6 +26,7 @@ const ServicePage = () => {
         <Discoveryportal />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

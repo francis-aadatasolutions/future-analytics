@@ -11,7 +11,7 @@ const Footer = () => {
         <div className='flex flex-col gap-12 md:flex-row md:justify-between'>
           <div className='text-white'>
             {/* links */}
-            <h5 className='font-semibold text-xl'>Links</h5>
+            <h5 className='font-semibold uppercase'>company</h5>
             <ul className='mt-8 space-y-4'>
               {navbarLinks.map((item) => {
                 const { id, name, url } = item;
@@ -27,13 +27,15 @@ const Footer = () => {
           </div>
           <div className='text-white'>
             {/* services */}
-            <h5 className='font-semibold text-xl'>Services</h5>
+            <h5 className='font-semibold uppercase'>Services</h5>
             <ul className='mt-8 space-y-4'>
               {servicesContent.map((item) => {
                 const { id, title } = item;
                 return (
                   <li key={id}>
-                    <Link href='#'>{title}</Link>;
+                    <Link href={`/services/service-details/${id}`}>
+                      {title}
+                    </Link>
                   </li>
                 );
               })}
@@ -41,19 +43,21 @@ const Footer = () => {
           </div>
           <div className='text-white'>
             {/* contact */}
-            <h5 className='font-semibold text-xl'>Services</h5>
+            <h5 className='font-semibold uppercase '>Connect with us</h5>
             <div className='mt-8'>
               <div>
-                <p>123 Green Street</p>
-                <p> Mayfair, London W1K 6RJ</p>
-                <p>United Kingdom</p>
+                <p>Gresham Works, Office 7, 38 Market Street, LE1 6DP</p>
               </div>
+              <p>+441164828916</p>
               <p className='my-4'>contact@futureanalytics.com</p>
-              <p>+44 20 1234 5678</p>
             </div>
-            <div>
-              <Link href='#'>
-                <AiFillLinkedin />
+            <div className='mt-8'>
+              <h5 className='font-semibold uppercase'> follow us</h5>
+              <Link
+                href='https://www.linkedin.com/company/futureanalyticsio/'
+                target='_blank'
+                rel='noreferrer'>
+                <AiFillLinkedin className='text-4xl' />
               </Link>
             </div>
           </div>

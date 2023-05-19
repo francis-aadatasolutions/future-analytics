@@ -3,15 +3,24 @@ import powerBI from '../assets/images/services/pbi.png';
 import semanticLayer from '../assets/images/services/semanticlayer.png';
 import webApps from '../assets/images/services/web-apps.png';
 import powerBIDashboard from '../assets/images/Dashboard.png';
+import { PowerBIVector } from 'src/assets/SVG/Services/PowerBI';
+import { SemanticVector } from 'src/assets/SVG/Services/Semantic';
+import { DataBricksVector } from 'src/assets/SVG/Services/DataBrics';
+import { EmbededDataVector } from 'src/assets/SVG/Services/EmbededData';
+import pbi from 'src/assets/SVG/technologies/pbi.svg';
+import semantic from 'src/assets/SVG/technologies/semantic.svg';
+import dataplatform from 'src/assets/SVG/technologies/dataplatform.svg';
+import embeded from 'src/assets/SVG/technologies/embeded.svg';
 
 export const servicesContent = [
   {
     id: '1',
-    images: powerBI,
+    images: pbi,
+
     subImages: powerBIDashboard,
     title: 'Power BI Delivery Services',
     shortTitle: `Accelerate Your Analytics with Our Power BI Dashboard Projects`,
-    subTitle: `In the world of business intelligence, efficiency and accuracy are everything. That's why we've revolutionized our Power BI dashboard development process to offer you a rapid turnaround like never before.`,
+    subTitle: `In the world of business intelligence, efficiency and accuracy are everything. That's why we've revolutionized our Power BI dashboard development process.`,
     description: `<p>In the world of business intelligence, efficiency and accuracy are everything. That's why we've revolutionized our Power BI dashboard development process to offer you a rapid turnaround like never before.</p>
     <p><b>Here's how it works:</b></p>
     <p><b>Step 1: Use Our Discovery Platform</b></p>
@@ -28,13 +37,14 @@ export const servicesContent = [
   },
   {
     id: '2',
-    images: semanticLayer,
+    images: semantic,
+
     title: 'Semantic Layer and Data Visualization',
     servicePageTitle:
       'Harmonize Your Business Metrics for Cross-Platform Visualization',
     shortTitle:
       'MI Services - Optimize Your Analytics with Semantic Layering and Advanced Visualization',
-    subTitle: `Our dedicated team of analysts will collaborate closely with you to thoroughly understand your business's unique analytics landscape. This in-depth collaboration will allow us to identify the core metrics that truly drive your business, examining these across the entirety of your existing data platform.`,
+    subTitle: `Our dedicated team of analysts will collaborate closely with you to thoroughly understand your business's unique analytics landscape.`,
     description: `<p>Our dedicated team of analysts will collaborate closely with you to thoroughly understand your business's unique analytics landscape. This in-depth collaboration will allow us to identify the core metrics that truly drive your business, examining these across the entirety of your existing data platform.</p>
       <p>One key issue many organizations face is duplication across their reporting landscape. This not only leads to inefficiencies but also has the potential to create confusion or inconsistencies in reporting. To combat this, our team will identify any such duplication, ensuring your metrics are clear, streamlined, and consistently reported across your entire organization.</p>
       <p>Once we've defined these core metrics, our next step is to integrate them into a semantic layer tailored to your specific business needs. Semantic layers serve as an intermediary between raw data in databases and end users, translating technical data terminology into familiar business terms. This translation makes your data more understandable and accessible, ultimately enabling better, data-driven decision making.</p>
@@ -46,12 +56,13 @@ export const servicesContent = [
   },
   {
     id: '3',
-    images: databricks,
+    images: dataplatform,
+
     title: 'Data Platform and Data Visualization',
     servicePageTitle:
       ' Elevating Business Intelligence with Full-Spectrum Data Solutions',
     shortTitle: 'Real-Time Data Integration, Advanced Analytics & AI Services',
-    subTitle: `At Future Analytics, we're pioneers in the realm of advanced business intelligence, offering comprehensive data solutions that encompass everything from real-time and streaming data management to machine learning and artificial intelligence applications.`,
+    subTitle: `At Future Analytics, we're pioneers in the realm of advanced business intelligence, offering comprehensive data solutions that encompass everything from real-time`,
     description: `<p>At Future Analytics, we're pioneers in the realm of advanced business intelligence, offering comprehensive data solutions that encompass everything from real-time and streaming data management to machine learning and artificial intelligence applications.</p>
       <p>Our expert team utilizes cutting-edge tools such as Airbyte, Fivetran, and custom Python scripts to extract, transform, and harmonize your data, including real-time and streaming data. These processes are further optimized using industry-leading platforms such as DBT, Databricks, Azure Data Factory, and Apache Airflow.</p>
       <p>Our service suite goes beyond traditional data processing. We delve into your data entry procedures, offering strategic advice to streamline these operations and significantly boost the quality of your data before it even enters the system.</p>
@@ -63,8 +74,11 @@ export const servicesContent = [
   },
   {
     id: '4',
-    images: webApps,
+    images: embeded,
+
     title: 'Embedded Analytics',
+    shortTitle:
+      'Get a custom data app with a landing page, RBAC, user management, payment integration, data architecture, platform, and dashboards.',
     subTitle: `Get a custom data app with a landing page, RBAC, user management, payment integration, data architecture, platform, and dashboards.`,
     description:
       'Get a custom data app with a landing page, RBAC, user management, payment integration, data architecture, platform, and dashboards.',

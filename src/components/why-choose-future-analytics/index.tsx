@@ -16,13 +16,13 @@ const WhyChooseFutureAnalytics = () => {
   return (
     <section className='py-24 bg-light-blue'>
       <div className='center '>
-        <div className='flex flex-col md:flex-row md:justify-between'>
+        <div className='flex flex-col'>
           <div>
-            <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
+            <h4 className='capitalize font-bold text-secondary mb-3 text-3xl md:text-4xl'>
               Why choose future analytics?
             </h4>
           </div>
-          <div className='mt-12 md:mt-0'>
+          <div className='mt-12 md:mt-8'>
             <BtnLink
               Icon={FiHexagon}
               url='/about-us'
@@ -31,7 +31,7 @@ const WhyChooseFutureAnalytics = () => {
           </div>
         </div>
         <div className='mt-24'>
-          <div className='grid grid-cols-1 gap-8 md:grid-cols-5 drop-shadow-md'>
+          <div className='grid grid-cols-1 gap-8 md:grid-cols-3 xl:grid-cols-5 drop-shadow-5xl'>
             {futureAnalyticsCardContent.map((item, index) => {
               const { icon, title, description } = item;
               const isCardSelected = index === selectedCard;
@@ -40,7 +40,7 @@ const WhyChooseFutureAnalytics = () => {
                   onMouseEnter={() => handleCardHover(index)}
                   onMouseLeave={() => setSelectedCard(null)}
                   key={index}
-                  className='flex flex-col items-center text-center p-8 bg-white rounded-xl cursor-pointer'>
+                  className='flex flex-col items-center text-center p-8 bg-light-blue rounded-xl cursor-pointer'>
                   {isCardSelected ? (
                     <motion.p
                       variants={descriptionVariants}

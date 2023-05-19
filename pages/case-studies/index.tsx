@@ -2,9 +2,10 @@ import Hero from '@components/case-studies/hero';
 import RecentCaseStudies from '@components/case-studies/recent';
 import Contact from '@components/contact';
 import Footer from '@components/footer';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import Head from 'next/head';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const CaseStudiesPage = () => {
   return (
@@ -16,13 +17,14 @@ const CaseStudiesPage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div className='relative flex flex-col justify-center items-center p-4 gradient-bg'>
+        <div className='relative flex flex-col justify-center items-center p-4 bg-dark-blue'>
           <Navbar />
           <Hero />
         </div>
         <RecentCaseStudies />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

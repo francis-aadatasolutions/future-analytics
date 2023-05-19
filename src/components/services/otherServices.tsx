@@ -15,7 +15,7 @@ const OtherServices = () => {
   return (
     <section className=' py-24 bg-light-blue'>
       <div className='center'>
-        <h4 className='capitalize font-bold text-primary mb-3 md:mb-12 text-3xl md:text-4xl'>
+        <h4 className='capitalize font-bold text-secondary mb-3 md:mb-12 text-3xl md:text-4xl'>
           Other Services
         </h4>
       </div>
@@ -28,7 +28,7 @@ const OtherServices = () => {
                 <Image
                   src={images}
                   alt={title}
-                  className='w-[200px] h-[170px]'
+                  className='w-[400px] h-[300px]'
                 />
                 <div className='flex flex-col items-center text-center md:text-left md:items-start'>
                   <h5 className='text-xl font-semibold text-secondary '>

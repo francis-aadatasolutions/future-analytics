@@ -1,11 +1,12 @@
 import Contact from '@components/contact';
 import Footer from '@components/footer';
-import Navbar from '@components/navbar/navbar';
+import Navbar from 'src/HOC/Navigation';
 import Services from '@components/services';
 import Hero from '@components/showcase/hero';
 import Slider from '@components/showcase/slider';
 import Head from 'next/head';
 import React from 'react';
+import BackToTopButton from 'src/HOC/BackToTopButton';
 
 const ShowcasePage = () => {
   return (
@@ -17,7 +18,7 @@ const ShowcasePage = () => {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <main>
-        <div className='relative flex flex-col justify-center items-center p-4 gradient-bg'>
+        <div className='relative flex flex-col justify-center items-center p-4 bg-dark-blue'>
           <Navbar />
           <Hero />
         </div>
@@ -27,6 +28,7 @@ const ShowcasePage = () => {
         <Services />
         <Contact />
         <Footer />
+        <BackToTopButton />
       </main>
     </>
   );

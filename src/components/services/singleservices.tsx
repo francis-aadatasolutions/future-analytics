@@ -1,11 +1,10 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { servicesContent } from 'src/utils/services';
 import parser from 'html-react-parser';
 import BtnLink from 'src/HOC/Button';
 import { FaGgCircle } from 'react-icons/fa';
-
 const Singleservices = () => {
   const router = useRouter();
 
@@ -30,7 +29,7 @@ const Singleservices = () => {
             return (
               <>
                 <div key={index}>
-                  <h4 className='capitalize font-bold text-primary mb-3 text-3xl md:text-4xl'>
+                  <h4 className='capitalize font-bold text-secondary mb-3 text-3xl md:text-4xl'>
                     {title}
                   </h4>
                   <p className='my-4'>{subDescription}</p>
@@ -57,14 +56,15 @@ const Singleservices = () => {
             );
           })}
         </div>
-
-        <div className='mt-12'>
-          <Image
-            src={singleService?.subImages as any}
-            alt='Data Image'
-            className='w-full'
-          />
-        </div>
+        {singleService?.subImages ? (
+          <div className='mt-12'>
+            <Image
+              src={singleService?.subImages as any}
+              alt='Data Image'
+              className='w-full'
+            />
+          </div>
+        ) : null}
       </article>
     </div>
   );
