@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 // import heroimage from '../../assets/images/hero/homepage/newlaptop.png';
-import heroimage from '../../assets/images/hero/homepage/tablet2.png';
+// import heroimage from '../../assets/images/hero/homepage/tablet2.png';
+import heroimage from '../../assets/images/hero/homepage/hero.png';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { TypeAnimation } from 'react-type-animation';
@@ -31,7 +32,8 @@ const Hero = () => {
   };
 
   return (
-    <div className='center pt-4 pb-32 md:pb-52'>
+    // <div className='center pt-4 pb-32 md:pb-52'>
+    <div className='center pt-4  pb-32'>
       <div className=' grid grid-cols-1 md:grid-cols-[400px_2fr] lg:grid-cols-[500px_2fr] 2xl:grid-cols-[600px_2fr] text-white'>
         <div className=' md:ml-24'>
           <motion.div
@@ -79,7 +81,8 @@ const Hero = () => {
           <Image
             src={heroimage}
             alt='Microsoft Surface Pro 3'
-            className=' absolute top-0 right-0 z-10 hidden  md:flex md:justify-end items-end h-[450px] w-[600px] '
+            // className=' absolute top-0 right-0 z-10 hidden  md:flex md:justify-end items-end h-[450px] w-[600px] '
+            className=' absolute top-0 z-10 hidden  md:flex md:justify-end items-end h-[400px]'
           />
         </motion.div>
       </div>
