@@ -30,32 +30,40 @@ const LeadershipSection = () => {
             </div>
             <div className='mt-12'>
               <p className='text-lg my-4'>
-                I've had a dynamic journey in the data analytics industry.
-                Starting as a Marketing Executive and Sales Analyst, I quickly
-                understood how to boost sales and marketing performance across a
-                diverse range of countries. Next, I ran AA Consultancy as an
-                independent contractor. There, I developed Power BI Models and
-                Dashboards for a variety of businesses, from SMEs and franchises
-                to FTSE 100 and NYSE 100 corporations, spanning retail,
+                Alexander has had a dynamic journey in the data analytics
+                industry. He began his career as a Marketing Executive and Sales
+                Analyst, swiftly grasping the strategies to amplify sales and
+                marketing performance across a plethora of countries.
+              </p>
+
+              <p className='text-lg my-4'>
+                His career progressed to a leadership role at AA Consultancy,
+                where he served as an independent contractor. In this capacity,
+                he honed his skills by developing Power BI Models and Dashboards
+                for a wide spectrum of businesses, ranging from SMEs and
+                franchises to FTSE 100 and NYSE 100 corporations. This diverse
+                client base spanned several industries including retail,
                 manufacturing, tech startups, and more.
               </p>
 
               <p className='text-lg my-4'>
-                One key project was at Walgreens Boots Alliance, where I led a
-                departmental transformation. We moved from legacy systems to
-                Azure, instilled best practices in tabular modelling and SQL
-                development, and completely shifted to an agile way of working
-                with Azure DevOps.
+                A notable milestone in his career was a significant project at
+                Walgreens Boots Alliance. Here, Alexander was instrumental in
+                leading a departmental transformation. The transformation
+                involved transitioning from legacy systems to Azure, instilling
+                best practices in tabular modeling and SQL development, and
+                entirely shifting to an agile way of working with Azure DevOps.
               </p>
 
               <p className='text-lg my-4'>
-                Now, as the founder of Future Analytics, I'm using this vast
-                experience to innovate in analytics. My focus is on
-                customer-centric solutions that make complex data accessible,
-                always with the aim to help businesses make data-driven
-                decisions. My vision for Future Analytics is to push what's
-                possible in this industry, backed by a talented team of
-                developers.
+                In his current role as the founder of Future Analytics,
+                Alexander is leveraging his extensive experience to pioneer
+                innovations in analytics. His primary focus lies in delivering
+                customer-centric solutions that demystify complex data. His aim
+                is always centered on aiding businesses to make data-driven
+                decisions. Guided by a talented team of developers, Alexander's
+                vision for Future Analytics is to explore and extend the
+                boundaries of what's achievable in the data analytics industry.
               </p>
             </div>
           </div>
